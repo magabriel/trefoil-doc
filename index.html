@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content=""/>
-    <meta name="date" content="02/04/2014"/>
+    <meta name="date" content="02/06/2014"/>
     <meta name="generator" content="trefoil DEV"/>
 
     <title>Trefoil documentation</title>
@@ -1105,7 +1105,7 @@
     <p><img class="logo" src="images/logo_publisher.gif" alt="" /></p>
 
     
-        <p>Version 2014.0.859 - 201402042112</p>
+        <p>Version 2014.0.873 - 201402061712</p>
     
     <p>&copy; 2014</p>
 
@@ -2948,7 +2948,7 @@ appealing for textbooks or technical publications.</p>
 
 <h2 id="autoglossaryplugin">AutoGlossaryPlugin</h2>
 
-<p>The <span class="auto-glossary-term"><a href="#auto-glossary-2696501299-auto-glossary-0" id="auto-glossary-term-2696501299-auto-glossary-0">auto-glossary</a></span> plugin handles the generation of a glossary of terms 
+<p>The <span class="auto-glossary-term"><abbr data-toggle="tooltip" title="A&#x20;glossary&#x20;generated&#x20;automatically.">auto-glossary</abbr></span> plugin handles the generation of a glossary of terms 
 that are automatically hyperlinked to its definitions.</p>
 
 <h3 id="availability-15">Availability</h3>
@@ -3037,7 +3037,7 @@ glossary</span><span class="sy2">:
 <p>Depending on the coverage options, each ocurrence (or only the first one) of a defined
 term is replaced by an hyperlink to its definition.</p>
 
-<p>The <span class="auto-glossary-term"><a href="#auto-glossary-2794359480-glossary-terms-0" id="auto-glossary-term-2794359480-glossary-terms-0">glossary term</a></span> definitions are of the form <code>"term": Term definition</code>, where each
+<p>The <span class="auto-glossary-term"><abbr data-toggle="tooltip" title="A&#x20;word&#x20;or&#x20;expression&#x20;to&#x20;be&#x20;defined&#x20;as&#x20;part&#x20;of&#x20;a&#x20;glossary.">glossary term</abbr></span> definitions are of the form <code>"term": Term definition</code>, where each
 &#8220;term&#8221; can be either a <em>literal expresion</em> or a <em>variant expression</em>:</p>
 
 <div class="code yaml">
@@ -3073,7 +3073,7 @@ are processed.</p></li>
 <p><strong>Example:</strong></p>
 
 <ul>
-<li>This paragraph contains the expressions &#8220;<span class="auto-glossary-term"><a href="#auto-glossary-1435020988-example-term-1-0" id="auto-glossary-term-1435020988-example-term-1-0">example term 1</a></span>&#8221; and &#8220;<span class="auto-glossary-term"><a href="#auto-glossary-138462274-example-term-2-0" id="auto-glossary-term-138462274-example-term-2-0">example term 2</a></span>&#8221; that should
+<li>This paragraph contains the expressions &#8220;<span class="auto-glossary-term"><abbr data-toggle="tooltip" title="Description&#x20;of&#x20;term&#x20;1.">example term 1</abbr></span>&#8221; and &#8220;<span class="auto-glossary-term"><abbr data-toggle="tooltip" title="Description&#x20;of&#x20;term&#x20;2.">example term 2</abbr></span>&#8221; that should
 be converted into glossary terms.</li>
 </ul>
 
@@ -3095,9 +3095,19 @@ be converted into glossary terms.</li>
 </div>
 
 <div class="admonition note">
-  <h5 id="todo-2">TODO</h5>
+  <h5 id="note-11">NOTE</h5>
   
-  <p>Create an adequate implementation for editions different from <code>epub</code> and <code>mobi</code> (like this one).</p>
+  <p>The version of the autoglossary in this documentation is not the same than the one you will get 
+  for an  <code>epub</code> or <code>mobi</code> ebook because of the limited capabilities of the format. Moreover,
+  as this documentation uses <code>Twitter Bootstrap 3</code>, it has some additional differences:</p>
+  
+  <ul>
+  <li>The <code>epub</code> or <code>mobi</code> versions are rendered using only HTML.</li>
+  <li>This version uses Javascript to implement the user interactions.</li>
+  </ul>
+  
+  <p>Please generate the <code>epub</code> or <code>mobi</code> versions of this documentation
+  to fully appreciate the differences.</p>
 </div>
 
 <h3 id="output-5">Output</h3>
@@ -3320,7 +3330,7 @@ consetetur sadipscing elitr, sed diam non umyeirmod.
 <p>The quizes shown above as examples will render as follows:</p>
 
 <div class="admonition note">
-  <h5 id="note-11">NOTE</h5>
+  <h5 id="note-12">NOTE</h5>
   
   <p>The following rendered version of the examples is not the same
   than the one you will get for an <code>epub</code> or <code>mobi</code> ebook 
@@ -3910,7 +3920,7 @@ the standard <code>Base</code> theme will be used, which is likely to cause
 problems if you activated some plugin that requires a non-standard template.</p>
 
 <div class="admonition note">
-  <h5 id="note-12">Note</h5>
+  <h5 id="note-13">Note</h5>
   
   <p><strong>trefoil</strong> themes are backwards-compatible with <strong>easybook</strong> themes, 
   meaning that any book that can be published by <strong>easybook</strong> can also be
@@ -3967,7 +3977,7 @@ the new optional argument <code>--themes_dir</code>:</p>
 </div>
 
 <div class="admonition note">
-  <h5 id="note-13">Note</h5>
+  <h5 id="note-14">Note</h5>
   
   <p>Standard <strong>trefoil</strong> themes do not support all the edition types, 
   but <code>epub</code> and <code>mobi</code> are available in each theme (please
@@ -4064,63 +4074,18 @@ that edition.</p></li>
         </ol>
 </div>
 
-                            <div class="item auto-glossary">
-    <h1 id="glossary"><span></span> Glossary</h1>
-
-    <p>The next pages contain several definitions for certain terms found in the text.</p>
-
-<p>To return to the text, please &#8220;click&#8221; on the return link of each term.</p>
-
-
-    <hr />
-
-            
-        <div class="definition" id="auto-glossary-2696501299-auto-glossary-0">
-            <dl>
-                <dt class="definition">auto-glossary</dt>
-                <dd class="description">A glossary generated automatically.&#160;<a class="backlink" href="#auto-glossary-term-2696501299-auto-glossary-0">[&#8617;]</a>
-                </dd>
-            </dl>
-
-        </div>
-
-                    
-        <div class="definition" id="auto-glossary-2794359480-glossary-terms-0">
-            <dl>
-                <dt class="definition">glossary term</dt>
-                <dd class="description">A word or expression to be defined as part of a glossary.&#160;<a class="backlink" href="#auto-glossary-term-2794359480-glossary-terms-0">[&#8617;]</a>
-                </dd>
-            </dl>
-
-        </div>
-
-                    
-        <div class="definition" id="auto-glossary-1435020988-example-term-1-0">
-            <dl>
-                <dt class="definition">example term 1</dt>
-                <dd class="description">Description of term 1.&#160;<a class="backlink" href="#auto-glossary-term-1435020988-example-term-1-0">[&#8617;]</a>
-                </dd>
-            </dl>
-
-        </div>
-
-                    
-        <div class="definition" id="auto-glossary-138462274-example-term-2-0">
-            <dl>
-                <dt class="definition">example term 2</dt>
-                <dd class="description">Description of term 2.&#160;<a class="backlink" href="#auto-glossary-term-138462274-example-term-2-0">[&#8617;]</a>
-                </dd>
-            </dl>
-
-        </div>
-
-            
-</div>
-
+                            
                             
                     </div>
     </div>
 </div>
+
+<script>
+    /* initialize optional Bootstrap components */
+    $(document).ready(function (){
+        $('[data-toggle=tooltip]').tooltip();
+    });
+</script>
 
 </body>
 </html>
