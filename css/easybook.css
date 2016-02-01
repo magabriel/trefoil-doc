@@ -1,10 +1,9 @@
 /*
-
-                     |              |    
- ,---.,---.,---.,   .|---.,---.,---.|__/ 
- |---',---|`---.|   ||   ||   ||   ||  \ 
+                     |              |
+ ,---.,---.,---.,   .|---.,---.,---.|__/
+ |---',---|`---.|   ||   ||   ||   ||  \
  `---'`---^`---'`---|`---'`---'`---'`   `
-                `---'
+                `---
      _     _            __     _ _ 
    _| |_  | |_ _ _ ___ / _|___(_) |
   |_   _| |  _| '_/ -_)  _/ _ \ | |
@@ -441,6 +440,18 @@ blockquote {
   background-color: transparent;
   border: 0;
 }
+
+.admonition {
+  border: 1px solid #aaa;
+  border-radius: 6pt;
+  padding: 0 10pt;
+  page-break-inside:avoid;
+  font-size: .8em;
+}
+.admonition pre,
+  .admonition code {
+  font-size: .9em;
+}    
 
 
     blockquote {
@@ -1135,6 +1146,14 @@ table td[align="left"] {
 table th[align="right"],
 table td[align="right"] {
     text-align: right;
+}
+
+table th, table td {
+    border: 1px solid #aaa;
+}
+
+table th {
+    background: #ccc;
 }
 
 
@@ -1973,4 +1992,5 @@ div.item.footnotes{
     width: 263px;
     }
 }
+
 
