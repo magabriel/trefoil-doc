@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Miguel A. Gabriel - magabriel@gmail.com"/>
-    <meta name="date" content="01/16/2019"/>
+    <meta name="date" content="05/24/2021"/>
     <meta name="generator" content="trefoil DEV"/>
 
     <title>Trefoil documentation</title>
@@ -1337,9 +1337,19 @@
                     
                                                                                                                                                                                         <ul class="nav"><!-- level 3 -->
                                                                 <li><!-- level 3 -->
-                                <a href="#content-filtering"><span>7.1</span> -  Content filtering
+                                <a href="#content-exclusion"><span>7.1</span> -  Content exclusion
         </a>
                                                     
+                                            
+                
+                                        
+                                                                                        
+                    
+                                                    </li><!-- level 3 -->
+                            <li><!-- level 3 -->
+                            <a href="#content-filtering"><span>7.2</span> -  Content filtering
+        </a>
+                        
                                             
                 
                                         
@@ -1351,7 +1361,7 @@
                     
                                                     </li><!-- level 3 -->
                             <li><!-- level 3 -->
-                            <a href="#config-import"><span>7.2</span> -  Config import
+                            <a href="#config-import"><span>7.3</span> -  Config import
         </a>
                         
                                             
@@ -1411,7 +1421,7 @@
     <p><img class="logo" src="images/logo_publisher.gif" alt="" /></p>
 
     
-        <p>Version 2019.1.868 - 201901161323</p>
+        <p>Version 2019.1.870 - 202105241008</p>
     
     <hr />
 
@@ -1914,7 +1924,7 @@ book</span>:<span class="co4">
                         levels</span><span class="sy2">: </span>    <span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>           <span class="co3">
                         mode</span><span class="sy2">: </span>      letter        <span class="co3">
                         length</span><span class="sy2">: </span>    <span class="nu0">1</span>             <span class="co3">
-                        coverage</span><span class="sy2">: </span>  <span class="br0">&#91;</span>'chapter'<span class="br0">&#93;</span></pre>
+                        elements</span><span class="sy2">: </span>  <span class="br0">&#91;</span>'chapter'<span class="br0">&#93;</span></pre>
 </div>
 
 <p>where the options are:</p>
@@ -1923,7 +1933,7 @@ book</span>:<span class="co4">
 <li><code>levels</code>: The heading levels to add drop caps after. Values 1 to 6 (default: 1).</li>
 <li><code>mode</code>: Values <code>letter</code> or <code>word</code> (default: <code>letter</code>).</li>
 <li><code>length</code>: Number of letters or words to turn into drop caps (default: 1).</li>
-<li><code>coverage</code>: Array of book elements to process (default: [&#8216;chapter&#8217;]).</li>
+<li><code>elements</code>: Array of book elements to process (default: [&#8216;chapter&#8217;]).</li>
 </ul>
 
 <h3 id="description">3.1.3 Description</h3>
@@ -1977,8 +1987,8 @@ greater convenience.</p>
 <p>will produce the following <a class="auto-index-term" id="auto-index-term-410646757-html-3">HTML</a>:</p>
 
 <div class="code html">
-<pre class="html5"><span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;has-dropcaps&quot;</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;dropcaps&quot;</span>&gt;</span>T<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span>his text has first-letter drop caps.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
-<span class="sc2">&lt;<span class="kw2">p</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;has-dropcaps&quot;</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;dropcaps&quot;</span>&gt;</span>But<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span> this text has first-word drop caps.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span></pre>
+<pre class="markdown">&lt;p class=&quot;has-dropcaps&quot;&gt;&lt;span class=&quot;dropcaps&quot;&gt;T&lt;/span&gt;his text has first-letter drop caps.&lt;/p&gt;
+&lt;p class=&quot;has-dropcaps&quot;&gt;&lt;span class=&quot;dropcaps&quot;&gt;But&lt;/span&gt; this text has first-word drop caps.&lt;/p&gt;</pre>
 </div>
 
 <p>and will be shown in the book as (with some dummy text added):</p><p class="has-dropcaps"><span class="dropcaps">T</span>his text has first-letter drop caps. Lorem ipsum dolor sit amet, consetetur 
@@ -2176,48 +2186,48 @@ It works modifying the <a class="auto-index-term" id="auto-index-term-410646757-
 <h3 id="usage-5">3.4.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> HtmlTweaks <span class="br0">&#93;</span></pre>
+<pre class="htmml"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ HtmlTweaks ]</pre>
 </div>
 
 <p>The actual tweaks definitions are read from a separate <code>yaml</code> file:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/Contents/html-tweaks.yml</span>
-<span class="co1">#  or</span>
-<span class="co1"># &lt;current-theme&gt;/&lt;format&gt;/Config/html-tweaks.yml</span>
-<span class="co1">#  or</span>
-<span class="co1"># &lt;current-theme&gt;/Common/Config/html-tweaks.yml</span><span class="co4">
-tweaks</span><span class="sy2">:
-</span>    <span class="co1"># replacements to be made at onPreParse time</span><span class="co4">
-    onPreParse</span>:<span class="co3">
-        tweak-name-free</span><span class="sy2">: </span>                <span class="co1"># just a name</span><span class="co3">
-            tag</span><span class="sy2">: </span>'tag name'              <span class="co1"># tag name to find</span><span class="co3">
-            class</span><span class="sy2">: </span>'class-name'          <span class="co1"># OPTIONAL class name of tag</span>
+<pre class="htmml"># &lt;book-dir&gt;/Contents/html-tweaks.yml
+#  or
+# &lt;current-theme&gt;/&lt;format&gt;/Config/html-tweaks.yml
+#  or
+# &lt;current-theme&gt;/Common/Config/html-tweaks.yml
+tweaks:
+    # replacements to be made at onPreParse time
+    onPreParse:
+        tweak-name-free:                 # just a name
+            tag: 'tag name'              # tag name to find
+            class: 'class-name'          # OPTIONAL class name of tag
 &nbsp;
-            <span class="co1"># either one of 'insert', 'surround' or 'replace' operations</span>
-<span class="co3">
-            insert</span><span class="sy2">: </span>   <span class="co1"># insert HTML code inside the tag (surround content)</span><span class="co3">
-                open</span><span class="sy2">: </span> 'some html text'  <span class="co1"># opening text</span><span class="co3">
-                close</span><span class="sy2">: </span>'more html text'  <span class="co1"># closing text</span>
-<span class="co3">
-            surround</span><span class="sy2">: </span> <span class="co1"># surround tag with HTML code (surround the tag)</span><span class="co3">
-                open</span><span class="sy2">: </span> 'some html text'  <span class="co1"># opening text</span><span class="co3">
-                close</span><span class="sy2">: </span>'more html text'  <span class="co1"># closing text</span>
-<span class="co3">
-            replace</span><span class="sy2">: </span>  <span class="co1"># replace tag with another one</span><span class="co3">
-                tag</span><span class="sy2">: </span> 'another html tag' <span class="co1"># replacement tag</span>
+            # either one of 'insert', 'surround' or 'replace' operations
 &nbsp;
-    <span class="co1"># replacements to be made at onPostParse time</span><span class="co3">
-    onPostParse</span><span class="sy2">: </span>       <span class="co4">
-        another-tweak-name</span>:<span class="co3">
-            tag</span><span class="sy2">: </span>'tag name'
-            <span class="co1"># same options than onPreParse</span>
-            <span class="co1"># ...</span></pre>
+            insert:    # insert HTML code inside the tag (surround content)
+                open:  'some html text'  # opening text
+                close: 'more html text'  # closing text
+&nbsp;
+            surround:  # surround tag with HTML code (surround the tag)
+                open:  'some html text'  # opening text
+                close: 'more html text'  # closing text
+&nbsp;
+            replace:   # replace tag with another one
+                tag:  'another html tag' # replacement tag
+&nbsp;
+    # replacements to be made at onPostParse time
+    onPostParse:        
+        another-tweak-name:
+            tag: 'tag name'
+            # same options than onPreParse
+            # ...</pre>
 </div>
 
 <h3 id="description-4">3.4.3 Description</h3>
@@ -2264,55 +2274,55 @@ tweaks will work on the <a class="auto-index-term" id="auto-index-term-410646757
 <h4 id="example">3.4.3.2 Example</h4>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/Contents/html-tweaks.yml</span>
-<span class="co1">#  or</span>
-<span class="co1"># &lt;current-theme&gt;/&lt;format&gt;/Config/html-tweaks.yml</span>
-<span class="co1">#  or</span>
-<span class="co1"># &lt;current-theme&gt;/Common/Config/html-tweaks.yml</span><span class="co4">
-tweaks</span>:<span class="co4">
-    onPreParse</span><span class="sy2">:
-</span>        <span class="co1"># enclose contents of all divs of class &quot;one&quot; with box1</span><span class="co3">
-        tweak-div-one</span><span class="sy2">: </span>                                <span class="co3">
-            tag</span><span class="sy2">: </span>'div'<span class="co3">
-            class</span><span class="sy2">: </span>'one'   <span class="co4">
-            insert</span>:<span class="co3">
-                open</span><span class="sy2">: </span> '&lt;div class=<span class="st0">&quot;box1&quot;</span> markdown=<span class="st0">&quot;1&quot;</span>&gt;'<span class="co3">
-                close</span><span class="sy2">: </span>'&lt;/div&gt;'
+<pre class="htmml"># &lt;book-dir&gt;/Contents/html-tweaks.yml
+#  or
+# &lt;current-theme&gt;/&lt;format&gt;/Config/html-tweaks.yml
+#  or
+# &lt;current-theme&gt;/Common/Config/html-tweaks.yml
+tweaks:
+    onPreParse:
+        # enclose contents of all divs of class &quot;one&quot; with box1
+        tweak-div-one:                                 
+            tag: 'div'
+            class: 'one'   
+            insert:
+                open:  '&lt;div class=&quot;box1&quot; markdown=&quot;1&quot;&gt;'
+                close: '&lt;/div&gt;'
 &nbsp;
-        <span class="co1"># surround all divs of class &quot;two&quot; with box2</span><span class="co3">
-        tweak-div-two</span><span class="sy2">: </span>                                <span class="co3">
-            tag</span><span class="sy2">: </span>'div'<span class="co3">
-            class</span><span class="sy2">: </span>'two'   <span class="co3">
-            surround</span><span class="sy2">: </span><span class="co3">
-                open</span><span class="sy2">: </span> '&lt;div class=<span class="st0">&quot;box2&quot;</span>&gt;'<span class="co3">
-                close</span><span class="sy2">: </span>'&lt;/div&gt;'
+        # surround all divs of class &quot;two&quot; with box2
+        tweak-div-two:                                 
+            tag: 'div'
+            class: 'two'   
+            surround: 
+                open:  '&lt;div class=&quot;box2&quot;&gt;'
+                close: '&lt;/div&gt;'
 &nbsp;
-        <span class="co1"># replace all spans with divs</span><span class="co3">
-        tweak-span-three</span><span class="sy2">: </span><span class="co3">
-            tag</span><span class="sy2">: </span>'span'<span class="co3">
-            replace</span><span class="sy2">: </span><span class="co3">
-                tag</span><span class="sy2">: </span> 'div'                  
-                <span class="co4">
-    onPostParse</span><span class="sy2">:
-</span>        <span class="co1"># enclose contents of 'pre' tags between lines</span><span class="co3">
-        tweak-pre</span><span class="sy2">: </span>                                <span class="co3">
-            tag</span><span class="sy2">: </span>'pre'   <span class="co4">
-            insert</span>:<span class="co3">
-                open</span><span class="sy2">: </span> '======\n'<span class="co3">
-                close</span><span class="sy2">: </span>'\n<span class="sy1">------</span>'
+        # replace all spans with divs
+        tweak-span-three: 
+            tag: 'span'
+            replace: 
+                tag:  'div'                  
 &nbsp;
-        <span class="co1"># surround tables with box1</span><span class="co4">
-        tweak-table</span>:<span class="co3">
-            tag</span><span class="sy2">: </span>'table'<span class="co3">
-            surround</span><span class="sy2">: </span><span class="co3">
-                open</span><span class="sy2">: </span> '&lt;div class=<span class="st0">&quot;box1&quot;</span>&gt;'<span class="co3">
-                close</span><span class="sy2">: </span>'&lt;/div&gt;'
+    onPostParse:
+        # enclose contents of 'pre' tags between lines
+        tweak-pre:                                 
+            tag: 'pre'   
+            insert:
+                open:  '======\n'
+                close: '\n------'
 &nbsp;
-        <span class="co1"># convert all unordered lists into ordered lists</span><span class="co4">
-        tweak-ul</span>:<span class="co3">
-            tag</span><span class="sy2">: </span>'ul'<span class="co3">
-            replace</span><span class="sy2">: </span><span class="co3">
-                tag</span><span class="sy2">: </span> 'ol'</pre>
+        # surround tables with box1
+        tweak-table:
+            tag: 'table'
+            surround: 
+                open:  '&lt;div class=&quot;box1&quot;&gt;'
+                close: '&lt;/div&gt;'
+&nbsp;
+        # convert all unordered lists into ordered lists
+        tweak-ul:
+            tag: 'ul'
+            replace: 
+                tag:  'ol'</pre>
 </div>
 
 <div class="page-break"></div>
@@ -2340,15 +2350,12 @@ tweaks</span>:<span class="co4">
 <h3 id="usage-6">3.5.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml </span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> Illustrations <span class="br0">&#93;</span><span class="co4">
-                options</span>:<span class="co4">
-                    FootnotesExtend</span>:<span class="co3">
-                        type</span><span class="sy2">: </span>end  <span class="co1"># (end, inject, item, inline)</span></pre>
+<pre class="htmml"># &lt;book-dir&gt;/config.yml 
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ Illustrations ]</pre>
 </div>
 
 <h3 id="description-5">3.5.3 Description</h3>
@@ -2490,12 +2497,12 @@ This is a table:
 <h3 id="usage-7">3.6.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> ImageExtra <span class="br0">&#93;</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ ImageExtra ]</pre>
 </div>
 
 <h3 id="description-6">3.6.3 Description</h3>
@@ -2808,12 +2815,12 @@ so if you are not targeting old Kindle devices you may not need this <a class="a
 <h3 id="usage-8">3.7.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> KindleTweaks <span class="br0">&#93;</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ KindleTweaks ]</pre>
 </div>
 
 <h3 id="description-7">3.7.3 Description</h3>
@@ -3084,12 +3091,12 @@ in <code>[[..]]</code>.</p>
 <h3 id="usage-11">3.10.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> TableExtra <span class="br0">&#93;</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ TableExtra ]</pre>
 </div>
 
 <h3 id="description-10">3.10.3 Description</h3>
@@ -3289,12 +3296,12 @@ formats like PDF.</p>
 <h3 id="usage-12">3.11.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> TabularLists <span class="br0">&#93;</span></pre>
+<pre class="code"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ TabularLists ]</pre>
 </div>
 
 <p>To activate this feature for a certain list, it must be enclosed between
@@ -4022,12 +4029,12 @@ the book&#8217;s `config.yml&#8217; .</p>
 <h3 id="usage-19">4.5.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> QualityControl <span class="br0">&#93;</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ QualityControl ]</pre>
 </div>
 
 <h3 id="description-18">4.5.3 Description</h3>
@@ -4085,17 +4092,17 @@ where each component is an integer and the separator is a single dot.</p>
 <h3 id="usage-20">4.6.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml </span><span class="co4">
-book</span>:<span class="co3">
-    version</span><span class="sy2">: </span>'<span class="nu0">1.0</span>'  <span class="co1"># This is the version string</span><span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> VersionUpdater <span class="br0">&#93;</span><span class="co4">
-                options</span>:<span class="co4">
-                    VersionUpdater</span>:<span class="co3">
-                        increment_ver</span><span class="sy2">: </span>false <span class="co1"># don't increment the version (default)</span><span class="co3">
-                        increment_rev</span><span class="sy2">: </span>true  <span class="co1"># increment the revision (default)</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml 
+book:
+    version: '1.0'  # This is the version string
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ VersionUpdater ]
+                options:
+                    VersionUpdater:
+                        increment_ver: false # don't increment the version (default)
+                        increment_rev: true  # increment the revision (default)</pre>
 </div>
 
 <h3 id="description-19">4.6.3 Description</h3>
@@ -4184,15 +4191,15 @@ that are automatically hyperlinked to its definitions.</p>
 <h3 id="usage-21">5.1.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> AutoGlossary <span class="br0">&#93;</span><span class="co4">
-                options</span>:<span class="co4">
-                    AutoGlossary</span>:<span class="co3">
-                        pagebreaks</span><span class="sy2">: </span>true  <span class="co1"># use pagebreaks between defined terms</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ AutoGlossary ]
+                options:
+                    AutoGlossary:
+                        pagebreaks: true  # use pagebreaks between defined terms</pre>
 </div>
 
 <p>The terms&#8217; definitions are read from two files:</p>
@@ -4205,56 +4212,56 @@ book</span>:<span class="co4">
 <p>The global glossary definition is called <code>auto-glossary.yml</code>:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/Contents/auto-glossary.yml</span>
-<span class="co1"># Global glossary definitions</span><span class="co4">
-glossary</span>:<span class="co3">
-    options</span><span class="sy2">: </span>
-        <span class="co1"># 'all': all ocurrences</span>
-        <span class="co1"># 'item': (default) only first ocurrence </span>
-        <span class="co1">#         into an item (i.e. chapter)</span>
-        <span class="co1"># 'first': first ocurrence in the whole book</span><span class="co3">
-        coverage</span><span class="sy2">: </span>'item'
+<pre class="markdown"># &lt;book-dir&gt;/Contents/auto-glossary.yml
+# Global glossary definitions
+glossary:
+    options: 
+        # 'all': all ocurrences
+        # 'item': (default) only first ocurrence 
+        #         into an item (i.e. chapter)
+        # 'first': first ocurrence in the whole book
+        coverage: 'item'
 &nbsp;
-        <span class="co1"># Elements to process (default: &quot;chapter&quot;)</span><span class="co3">
-        elements</span><span class="sy2">: </span><span class="br0">&#91;</span><span class="st0">&quot;chapter&quot;</span><span class="br0">&#93;</span>
+        # Elements to process (default: &quot;chapter&quot;)
+        elements: [&quot;chapter&quot;]
 &nbsp;
-    <span class="co1">####</span>
-    <span class="co1"># Global definitions of terms:</span>
-    <span class="co1">#</span>
-    <span class="co1">#   &quot;term&quot;: Term definition</span>
-    <span class="co1">#</span>
-    <span class="co1"># Variants are allowed (singular, plural)</span>
-    <span class="co1">#</span>
-    <span class="co1">#   &quot;term[s]&quot;: Definition which is applied </span>
-    <span class="co1">#              to &quot;term&quot; and &quot;terms&quot;</span>
-    <span class="co1">#   &quot;term [one|two]&quot;: Definition which is </span>
-    <span class="co1">#              applied to &quot;term one&quot; and &quot;term two&quot;</span>
-    <span class="co1">####</span><span class="co4">
-    terms</span>:<span class="co3">
-        &quot;term&quot;</span><span class="sy2">: </span>Definition</pre>
+    ####
+    # Global definitions of terms:
+    #
+    #   &quot;term&quot;: Term definition
+    #
+    # Variants are allowed (singular, plural)
+    #
+    #   &quot;term[s]&quot;: Definition which is applied 
+    #              to &quot;term&quot; and &quot;terms&quot;
+    #   &quot;term [one|two]&quot;: Definition which is 
+    #              applied to &quot;term one&quot; and &quot;term two&quot;
+    ####
+    terms:
+        &quot;term&quot;: Definition</pre>
 </div>
 
 <p>The glossary definitions for each book item are named after the item it applies to 
 (so the glossary for <code>chapter1.md</code> item should be <code>chapter1-auto-glossary.yml</code>)</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/Contents/chapter1-auto-glossary.yml</span>
-<span class="co1"># Glossary definitions for chapter 1 </span><span class="co4">
-glossary</span><span class="sy2">:
-</span>    <span class="co1">####</span>
-    <span class="co1"># Definitions of terms for chapter-1:</span>
-    <span class="co1">#</span>
-    <span class="co1">#   &quot;term&quot;: Term definition</span>
-    <span class="co1">#</span>
-    <span class="co1"># Variants are allowed (singular, plural)</span>
-    <span class="co1">#</span>
-    <span class="co1">#   &quot;term[s]&quot;: Definition which is applied </span>
-    <span class="co1">#              to &quot;term&quot; and &quot;terms&quot;</span>
-    <span class="co1">#   &quot;term [one|two]&quot;: Definition which is </span>
-    <span class="co1">#              applied to &quot;term one&quot; and &quot;term two&quot;</span>
-    <span class="co1">####</span><span class="co4">
-    terms</span>:<span class="co3">
-        &quot;term&quot;</span><span class="sy2">: </span>Definition</pre>
+<pre class="markdown"># &lt;book-dir&gt;/Contents/chapter1-auto-glossary.yml
+# Glossary definitions for chapter 1 
+glossary:
+    ####
+    # Definitions of terms for chapter-1:
+    #
+    #   &quot;term&quot;: Term definition
+    #
+    # Variants are allowed (singular, plural)
+    #
+    #   &quot;term[s]&quot;: Definition which is applied 
+    #              to &quot;term&quot; and &quot;terms&quot;
+    #   &quot;term [one|two]&quot;: Definition which is 
+    #              applied to &quot;term one&quot; and &quot;term two&quot;
+    ####
+    terms:
+        &quot;term&quot;: Definition</pre>
 </div>
 
 <h3 id="description-20">5.1.3 Description</h3>
@@ -4266,13 +4273,13 @@ term is replaced by an hyperlink to its definition.</p>
 &#8220;term&#8221; can be either a <em>literal expresion</em> or a <em>variant expression</em>:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co4">glossary</span>:<span class="co4">
-    terms</span><span class="sy2">:
-</span>        <span class="co1"># literal expression</span><span class="co3">
-        &quot;Lorem ipsum&quot;</span><span class="sy2">: </span>Pseudo-latin text used as filler or dummy text.
-        <span class="co1"># variant expressions </span><span class="co3">
-        &quot;car[s]&quot;</span><span class="sy2">: </span>Definition which is applied to <span class="st0">&quot;car&quot;</span> and <span class="st0">&quot;cars&quot;</span><span class="co3">
-        &quot;orange [car|truck]&quot;</span><span class="sy2">: </span>Definition which is applied to <span class="st0">&quot;orange car&quot;</span> and <span class="st0">&quot;orange truck&quot;</span></pre>
+<pre class="markdown">glossary:
+    terms:
+        # literal expression
+        &quot;Lorem ipsum&quot;: Pseudo-latin text used as filler or dummy text.
+        # variant expressions 
+        &quot;car[s]&quot;: Definition which is applied to &quot;car&quot; and &quot;cars&quot;
+        &quot;orange [car|truck]&quot;: Definition which is applied to &quot;orange car&quot; and &quot;orange truck&quot;</pre>
 </div>
 
 <p>Using variants is possible to create defintitions that cover several cases (like singular
@@ -4354,12 +4361,12 @@ It also allows manual index entries.</p>
 <h3 id="usage-22">5.2.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> AutoIndex <span class="br0">&#93;</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ AutoIndex ]</pre>
 </div>
 
 <h3 id="description-21">5.2.3 Description</h3>
@@ -4371,37 +4378,37 @@ finding where in the book a topic is written about).</p>
 <p>The index definition file is called <code>auto-index.yml</code> and has the following format.</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/Contents/auto-index.yml</span><span class="co4">
-index</span>:<span class="co3">
-    options</span><span class="sy2">: </span><span class="co1"># optional section</span>
-         <span class="co1"># items where the auto index terms should be applied</span><span class="co3">
-         elements</span><span class="sy2">: </span><span class="br0">&#91;</span>chapter<span class="br0">&#93;</span> <span class="co1"># default</span>
+<pre class="markdown"># &lt;book-dir&gt;/Contents/auto-index.yml
+index:
+    options: # optional section
+         # items where the auto index terms should be applied
+         elements: [chapter] # default
 &nbsp;
-    <span class="co1"># definitions for automatically-added terms</span><span class="co4">
-    terms</span><span class="sy2">:
-</span>        <span class="co1"># A simple term definition:</span><span class="co3">
-        term</span><span class="sy2">: </span>text <span class="br0">&#40;</span>optional<span class="br0">&#41;</span>
+    # definitions for automatically-added terms
+    terms:
+        # A simple term definition:
+        term: text (optional)
 &nbsp;
-        <span class="co1"># A complex term definition (group):</span><span class="co4">
-        term</span>:<span class="co3">
-            text</span><span class="sy2">: </span><span class="st0">&quot;Term text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span><span class="co4">
-            terms</span>:<span class="co3">
-                &quot;subterm 1&quot;</span><span class="sy2">: </span><span class="st0">&quot;subterm 1 text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span>
-                <span class="co1"># ...</span><span class="co3">
-                &quot;subterm n&quot;</span><span class="sy2">: </span><span class="st0">&quot;subterm n text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span>
+        # A complex term definition (group):
+        term:
+            text: &quot;Term text&quot; (optional)
+            terms:
+                &quot;subterm 1&quot;: &quot;subterm 1 text&quot; (optional)
+                # ...
+                &quot;subterm n&quot;: &quot;subterm n text&quot; (optional)
 &nbsp;
-    <span class="co1"># definitions for manually-added terms</span><span class="co4">
-    manual-terms</span><span class="sy2">:
-</span>        <span class="co1"># A simple term definition:</span><span class="co3">
-        term-key-1</span><span class="sy2">: </span>text <span class="br0">&#40;</span>optional<span class="br0">&#41;</span>
+    # definitions for manually-added terms
+    manual-terms:
+        # A simple term definition:
+        term-key-1: text (optional)
 &nbsp;
-        <span class="co1">#A complex term definition (group):</span><span class="co4">
-        group-name</span>:<span class="co3">
-            text</span><span class="sy2">: </span><span class="st0">&quot;Term text for group&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span><span class="co4">
-            terms</span>:<span class="co3">
-                subterm-key-1</span><span class="sy2">: </span><span class="st0">&quot;subterm 1 text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span>
-                <span class="co1"># ...</span><span class="co3">
-                subterm-key-n</span><span class="sy2">: </span><span class="st0">&quot;subterm n text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span></pre>
+        #A complex term definition (group):
+        group-name:
+            text: &quot;Term text for group&quot; (optional)
+            terms:
+                subterm-key-1: &quot;subterm 1 text&quot; (optional)
+                # ...
+                subterm-key-n: &quot;subterm n text&quot; (optional)</pre>
 </div>
 
 <p>The <strong>index definitions</strong> has the following sections:</p>
@@ -4521,16 +4528,16 @@ index entries that cover several cases (like singular and plural forms of a word
 <p>The definition file can <strong>optionally</strong> contain something similar to:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># manual terms definition</span><span class="co4">
-manual-terms</span>:<span class="co3">
-    term1</span><span class="sy2">: </span>This is a term
-     <span class="co1"># A complex term definition (group):</span><span class="co4">
-    term2-group</span>:<span class="co3">
-        text</span><span class="sy2">: </span><span class="st0">&quot;Term text for group&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span><span class="co4">
-        terms</span>:<span class="co3">
-            subterm-key-1</span><span class="sy2">: </span><span class="st0">&quot;subterm 1 text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span>
-            <span class="co1"># ...</span><span class="co3">
-            subterm-key-n</span><span class="sy2">: </span><span class="st0">&quot;subterm n text&quot;</span> <span class="br0">&#40;</span>optional<span class="br0">&#41;</span></pre>
+<pre class="markdown"># manual terms definition
+manual-terms:
+    term1: This is a term
+     # A complex term definition (group):
+    term2-group:
+        text: &quot;Term text for group&quot; (optional)
+        terms:
+            subterm-key-1: &quot;subterm 1 text&quot; (optional)
+            # ...
+            subterm-key-n: &quot;subterm n text&quot; (optional)</pre>
 </div>
 
 <p><strong>Example:</strong></p>
@@ -4582,18 +4589,18 @@ with a summary of terms processed and problems found.</p>
 <h3 id="usage-23">5.3.2 Usage</h3>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co4">
-            plugins</span>:<span class="co3">
-                enabled</span><span class="sy2">: </span><span class="br0">&#91;</span> EbookQuiz <span class="br0">&#93;</span>                <span class="co4">
-                options</span>:<span class="co4">
-                    EbookQuiz</span>:<span class="co4">
-                        ynb</span>:<span class="co3">
-                            yes</span><span class="sy2">: </span><span class="br0">&#91;</span> <span class="st0">&quot;Yes&quot;</span>, <span class="st0">&quot;True&quot;</span> <span class="br0">&#93;</span><span class="co3">
-                            no</span><span class="sy2">: </span><span class="br0">&#91;</span> <span class="st0">&quot;No&quot;</span>, <span class="st0">&quot;False&quot;</span> <span class="br0">&#93;</span><span class="co3">
-                            both</span><span class="sy2">: </span><span class="br0">&#91;</span> <span class="st0">&quot;Both&quot;</span> <span class="br0">&#93;</span></pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ EbookQuiz ]                
+                options:
+                    EbookQuiz:
+                        ynb:
+                            yes: [ &quot;Yes&quot;, &quot;True&quot; ]
+                            no: [ &quot;No&quot;, &quot;False&quot; ]
+                            both: [ &quot;Both&quot; ]</pre>
 </div>
 
 <h3 id="description-22">5.3.3 Description</h3>
@@ -5356,11 +5363,11 @@ uses <code>Twitter Bootstrap 3</code>.</p></li>
 book&#8217;s <code>config.yml</code>:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span><span class="sy2">:
-</span>        &lt;edition-name&gt;<span class="co3">
-            theme</span><span class="sy2">: </span>TrefoilTwo</pre>
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            theme: TrefoilTwo</pre>
 </div>
 
 <p>The <a class="auto-index-term" id="auto-index-term-2971905672-themes-11">theme</a> definitions will be looked up into <code>&lt;trefoil-dir&gt;/app/Resources/Themes</code>. 
@@ -5461,12 +5468,12 @@ the <code>Base</code> <a class="auto-index-term" id="auto-index-term-2971905672-
 packed into the final book for a given edition with the following configuration:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co4">book</span>:<span class="co4">
-    editions</span>:<span class="co4">
-        edition-name</span>:<span class="co3">
-            include_fonts</span><span class="sy2">: </span>true<span class="co4">
-            fonts</span><span class="sy2">:
-</span>                - Inconsolata-Regular
+<pre class="code">book:
+    editions:
+        edition-name:
+            include_fonts: true
+            fonts:
+                - Inconsolata-Regular
                 - Inconsolata-Bold</pre>
 </div>
 
@@ -5524,14 +5531,20 @@ that edition.</p></li>
         </button>
         <ul class="dropdown-menu">
                                                                                                                                                                                                                                                                     <li class="chapter level-2">
-        <a href="#content-filtering">
-                            <span>7.1</span> - Content filtering
+        <a href="#content-exclusion">
+                            <span>7.1</span> - Content exclusion
                     </a>
     </li>
 
-                                                                                                                                                                                                                                                                                        <li class="chapter level-2">
+                                                                                                                                                                                                                                            <li class="chapter level-2">
+        <a href="#content-filtering">
+                            <span>7.2</span> - Content filtering
+                    </a>
+    </li>
+
+                                                                                                                                                                                                                                                            <li class="chapter level-2">
         <a href="#config-import">
-                            <span>7.2</span> - Config import
+                            <span>7.3</span> - Config import
                     </a>
     </li>
 
@@ -5539,7 +5552,28 @@ that edition.</p></li>
     </div>
 
 
-<h2 id="content-filtering">7.1 Content filtering</h2>
+<h2 id="content-exclusion">7.1 Content exclusion</h2>
+
+<p>Some kinds of contents do not make sense for certain edition formats. 
+They will be automatically excluded:</p>
+
+<ul>
+<li><code>epub</code> ebooks usually do not include a visible table of contents (<a class="auto-index-term" id="auto-index-term-410646757-html-32">HTML</a> TOC), 
+as reader apps and devices heavily rely on the navigational TOC. But it could 
+make sense to include it on certain situations, so a <code>config.yml</code> parameter
+could be added to explicitly request it:</li>
+</ul>
+
+<div class="code yaml">
+<pre class="code"># config.yml
+book:
+    editions:
+        ebook:
+            format: epub
+            include_html_toc: true # An HTML TOC will be included</pre>
+</div>
+
+<h2 id="content-filtering">7.2 Content filtering</h2>
 
 <p>For books with several editions may be convenient to have a way to include
 some content in just one of them and not in the others, or to include
@@ -5558,17 +5592,17 @@ output format is not <code>pdf</code>, regarding of the edition name.</p></li>
 definition:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># config.yml</span><span class="co4">
-book</span>:<span class="co4">
-    contents</span>:<span class="co3">
-        - { element</span><span class="sy2">: </span>edition <span class="br0">&#125;</span><span class="co3">
-        - { element</span><span class="sy2">: </span>toc <span class="br0">&#125;</span><span class="co3">
-        - { element</span><span class="sy2">: </span>usage-instructions, content<span class="sy2">: </span>usage-instructions.md, editions<span class="sy2">: </span><span class="br0">&#91;</span>ebook, kindle<span class="br0">&#93;</span> <span class="br0">&#125;</span><span class="co3">
-        - { element</span><span class="sy2">: </span>print-instructions, content<span class="sy2">: </span>print-instructions.md, formats<span class="sy2">: </span><span class="br0">&#91;</span>pdf<span class="br0">&#93;</span> <span class="br0">&#125;</span><span class="co3">
-        - { element</span><span class="sy2">: </span>chapter, number<span class="sy2">: </span><span class="nu0">1</span>, content<span class="sy2">: </span>chapter1.md <span class="br0">&#125;</span></pre>
+<pre class="code"># config.yml
+book:
+    contents:
+        - { element: edition }
+        - { element: toc }
+        - { element: usage-instructions, content: usage-instructions.md, editions: [ebook, kindle] }
+        - { element: print-instructions, content: print-instructions.md, formats: [pdf] }
+        - { element: chapter, number: 1, content: chapter1.md }</pre>
 </div>
 
-<h4 id="syntax">7.1.0.1 Syntax</h4>
+<h4 id="syntax">7.2.0.1 Syntax</h4>
 
 <p>For a content item, the following options can be added:</p>
 
@@ -5592,7 +5626,7 @@ contain the item.</p></li>
 <p>If both <code>editions</code> and <code>formats</code> are used in the same item, it will only be included
 in editions that fulfill both sets of conditions.</p>
 
-<h2 id="config-import">7.2 Config import</h2>
+<h2 id="config-import">7.3 Config import</h2>
 
 <p>In some cases may be convenient to being able to somehow &#8220;import&#8221; some book config 
 definitions into our book config, to avoid repeating common values.</p>
@@ -5609,17 +5643,17 @@ ten books&#8217; <code>config.yml</code>.</p></li>
 <p>This functionality allows just that:</p>
 
 <div class="code yaml">
-<pre class="yaml"><span class="co1"># my_series/config.yml</span><span class="co4">
-easybook</span><span class="sy2">:
-</span>    <span class="co1"># all of easybook parameters</span><span class="co4">
-book</span>:<span class="co4">
-    editions</span>:<span class="co4">
-        ebook</span><span class="sy2">:
-</span>            <span class="co1"># definition of ebook edition</span><span class="co4">
-        kindle</span><span class="sy2">:
-</span>            <span class="co1"># definition of kindle edition</span><span class="co4">
-        print</span><span class="sy2">:
-</span>            <span class="co1"># definition of print edition</span></pre>
+<pre class="code"># my_series/config.yml
+easybook:
+    # all of easybook parameters
+book:
+    editions:
+        ebook:
+            # definition of ebook edition
+        kindle:
+            # definition of kindle edition
+        print:
+            # definition of print edition</pre>
 </div>
 
 <p>And then:</p>
@@ -5776,6 +5810,7 @@ in which the &#8220;local&#8221; definitions will be merged in.</p>
                                     <a href="#auto-index-term-410646757-html-29">[&#8618;]</a>
                                     <a href="#auto-index-term-410646757-html-30">[&#8618;]</a>
                                     <a href="#auto-index-term-410646757-html-31">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-32">[&#8618;]</a>
                 
             </div>
                                                                 <h5>M</h5>
