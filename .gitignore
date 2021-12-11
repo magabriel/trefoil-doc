@@ -1,0 +1,9 @@
+trefoil-doc-*.html
+
+.buildpath
+.project
+.settings
+
+nbproject
+
+.idea
