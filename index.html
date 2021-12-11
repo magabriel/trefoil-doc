@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Miguel A. Gabriel - magabriel@gmail.com"/>
-    <meta name="date" content="05/24/2021"/>
+    <meta name="date" content="12/11/2021"/>
     <meta name="generator" content="trefoil DEV"/>
 
     <title>Trefoil documentation</title>
@@ -1193,6 +1193,69 @@
                                                         
                         
                 
+                                                    
+                
+                
+                                
+                                        
+                                                                                        
+                    
+                                                                                                                                                                                        <ul class="nav"><!-- level 2 -->
+                                                                <li><!-- level 2 -->
+                                <a href="#the-trefoil-content-generation-plugins"><span>Chapter 6</span> -  The Trefoil content generation plugins
+        </a>
+                                                    
+                                            
+                
+                                        
+                                                                                        
+                    
+                                                                                                                                                                                        <ul class="nav"><!-- level 3 -->
+                                                                <li><!-- level 3 -->
+                                <a href="#wordsearchplugin"><span>6.1</span> -  WordSearchPlugin
+        </a>
+                                                    
+                                            
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                        
+                                                                                        
+                    
+                
+                                    </li><!-- level 3 -->
+                                                                        </ul><!-- level 3 -->
+                                                                                                </ul><!-- level 2 -->
+                                                            
+                                                        
+                        
+                
                 
                 
                                                                                 </li><!-- level before part -->
@@ -1220,7 +1283,7 @@
                     
                                                                                                                                                                                         <ul class="nav"><!-- level 2 -->
                                                                 <li><!-- level 2 -->
-                                <a href="#themes-system-enhancements"><span>Chapter 6</span> -  Themes system enhancements
+                                <a href="#themes-system-enhancements"><span>Chapter 7</span> -  Themes system enhancements
         </a>
                                                     
                                             
@@ -1230,7 +1293,7 @@
                     
                                                                                                                                                                                         <ul class="nav"><!-- level 3 -->
                                                                 <li><!-- level 3 -->
-                                <a href="#trefoil-themes-2"><span>6.1</span> -  Trefoil themes
+                                <a href="#trefoil-themes-2"><span>7.1</span> -  Trefoil themes
         </a>
                                                     
                                             
@@ -1240,7 +1303,7 @@
                     
                                                     </li><!-- level 3 -->
                             <li><!-- level 3 -->
-                            <a href="#custom-themes"><span>6.2</span> -  Custom themes
+                            <a href="#custom-themes"><span>7.2</span> -  Custom themes
         </a>
                         
                                             
@@ -1250,7 +1313,7 @@
                     
                                                     </li><!-- level 3 -->
                             <li><!-- level 3 -->
-                            <a href="#structure-of-a-theme"><span>6.3</span> -  Structure of a theme
+                            <a href="#structure-of-a-theme"><span>7.3</span> -  Structure of a theme
         </a>
                         
                                             
@@ -1260,7 +1323,7 @@
                     
                                                     </li><!-- level 3 -->
                             <li><!-- level 3 -->
-                            <a href="#components-of-a-theme"><span>6.4</span> -  Components of a theme
+                            <a href="#components-of-a-theme"><span>7.4</span> -  Components of a theme
         </a>
                         
                                             
@@ -1327,7 +1390,7 @@
                     
                                                                                                                                                                                         <ul class="nav"><!-- level 2 -->
                                                                 <li><!-- level 2 -->
-                                <a href="#other-funcionality"><span>Chapter 7</span> -  Other funcionality
+                                <a href="#other-funcionality"><span>Chapter 8</span> -  Other funcionality
         </a>
                                                     
                                             
@@ -1337,7 +1400,7 @@
                     
                                                                                                                                                                                         <ul class="nav"><!-- level 3 -->
                                                                 <li><!-- level 3 -->
-                                <a href="#content-exclusion"><span>7.1</span> -  Content exclusion
+                                <a href="#content-exclusion"><span>8.1</span> -  Content exclusion
         </a>
                                                     
                                             
@@ -1347,7 +1410,7 @@
                     
                                                     </li><!-- level 3 -->
                             <li><!-- level 3 -->
-                            <a href="#content-filtering"><span>7.2</span> -  Content filtering
+                            <a href="#content-filtering"><span>8.2</span> -  Content filtering
         </a>
                         
                                             
@@ -1361,10 +1424,14 @@
                     
                                                     </li><!-- level 3 -->
                             <li><!-- level 3 -->
-                            <a href="#config-import"><span>7.3</span> -  Config import
+                            <a href="#config-import"><span>8.3</span> -  Config import
         </a>
                         
                                             
+                
+                                        
+                                                                                        
+                    
                 
                                     </li><!-- level 3 -->
                                                                         </ul><!-- level 3 -->
@@ -1421,7 +1488,7 @@
     <p><img class="logo" src="images/logo_publisher.gif" alt="" /></p>
 
     
-        <p>Version 2019.1.870 - 202105241008</p>
+        <p>Version 2019.1.915 - 202112111841</p>
     
     <hr />
 
@@ -2379,11 +2446,10 @@ functionality with a simple syntax:</p>
 <div class="admonition note">
   <h5 id="what-are-trefoil-markers">What are Trefoil markers?</h5>
   
-  <p>Trefoil markers are a kind of function call wich produces <a class="auto-index-term" id="auto-index-term-410646757-html-11">HTML</a> code to be 
-  processed later. They are similar to <code>Twig</code> function calls but are enclosed 
-  between <code>{@ ... @}</code> delimiters.</p>
-  
-  <p>The &#8220;======&#8221; series between the opening <code>{@</code> and the function name is an optional
+  <p>Trefoil markers are a kind of function call wich produces <a class="auto-index-term" id="auto-index-term-410646757-html-11">HTML</a> code to be
+  processed later. They are similar to <code>Twig</code> function calls but are enclosed
+  between <code>{@ ... @}</code> delimiters.
+  The &#8220;======&#8221; series between the opening <code>{@</code> and the function name is an optional
   delimiter to help visually identifiying the block in the text.</p>
 </div>
 
@@ -2474,7 +2540,7 @@ This is a table:
 
 <div class="table" id="table-3-1">
     
-    <table><thead><tr><th   >Header 1</th><th   >Header 2</th></tr></thead><tbody><tr><td   >One</td><td   >One text.</td></tr><tr><td   >Two</td><td   >Two text.</td></tr></tbody></table>
+    <table><thead><tr><th>Header 1</th><th>Header 2</th></tr></thead><tbody><tr><td>One</td><td>One text.</td></tr><tr><td>Two</td><td>Two text.</td></tr></tbody></table>
 </div>
 
 
@@ -3114,7 +3180,7 @@ book:
 
 <div class="table" id="table-3-2">
     
-    <table><thead><tr><th   >Column 1</th><th   >Column 2</th><th   >Column 3</th></tr></thead><tbody><tr><td   >1.One</td><td   >1.Two</td><td   >1.Three</td></tr><tr><td   >2.One</td><td   >2.Two</td><td   >2.Three</td></tr></tbody></table>
+    <table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody><tr><td>1.One</td><td>1.Two</td><td>1.Three</td></tr><tr><td>2.One</td><td>2.Two</td><td>2.Three</td></tr></tbody></table>
 </div>
 
 
@@ -3136,7 +3202,7 @@ above cell in the previous row:</p>
 
 <div class="table" id="table-3-3">
     
-    <table><thead><tr><th   >Column 1</th><th   >Column 2</th><th   >Column 3</th></tr></thead><tbody><tr><td rowspan="2"  style="vertical-align: middle;" >1.One</td><td   >1.Two</td><td   >1.Three</td></tr><tr><td   >2.Two</td><td   >2.Three</td></tr><tr><td rowspan="2"  style="vertical-align: top;" >1.One top</td><td   >1.Two</td><td   >1.Three</td></tr><tr><td   >2.Two</td><td   >2.Three</td></tr></tbody></table>
+    <table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody><tr><td rowspan="2" style="vertical-align: middle;" >1.One</td><td>1.Two</td><td>1.Three</td></tr><tr><td>2.Two</td><td>2.Three</td></tr><tr><td rowspan="2" style="vertical-align: top;" >1.One top</td><td>1.Two</td><td>1.Three</td></tr><tr><td>2.Two</td><td>2.Three</td></tr></tbody></table>
 </div>
 
 
@@ -3158,7 +3224,7 @@ align to the cell top of instead than the middle.</p>
 
 <div class="table" id="table-3-4">
     
-    <table><thead><tr><th   >Column 1</th><th   >Column 2</th><th   >Column 3</th></tr></thead><tbody><tr><td  colspan="2" >1.One</td><td   >1.Three</td></tr><tr><td   >2.One</td><td   >2.Two</td><td   >2.Three</td></tr></tbody></table>
+    <table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody><tr><td colspan="2">1.One</td><td>1.Three</td></tr><tr><td>2.One</td><td>2.Two</td><td>2.Three</td></tr></tbody></table>
 </div>
 
 
@@ -3171,7 +3237,7 @@ align to the cell top of instead than the middle.</p>
 
 <div class="table" id="table-3-5">
     
-    <table><thead><tr><th   >Column 1</th><th   >Column 2</th><th   >Column 3</th></tr></thead><tbody><tr><td   >1.One</td><td   >&nbsp;</td><td   >1.Three</td></tr><tr><td   >2.One</td><td   >2.Two</td><td   >2.Three</td></tr></tbody></table>
+    <table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody><tr><td>1.One</td><td>&nbsp;</td><td>1.Three</td></tr><tr><td>2.One</td><td>2.Two</td><td>2.Three</td></tr></tbody></table>
 </div>
 
 
@@ -3193,7 +3259,7 @@ of table column alignment syntax:</p>
 
 <div class="table" id="table-3-6">
     
-    <table><thead><tr><th   align="right" >Column 1</th><th   align="left" >Column 2</th><th   align="center" >Column 3</th></tr></thead><tbody><tr><td rowspan="2" colspan="2" align="right" style="vertical-align: middle;" >1.One</td><td   align="center" >1.Three</td></tr><tr><td   align="center" >2.Three</td></tr><tr><td   align="right" >3.One</td><td   align="left" >3.Two</td><td   align="center" >3.Three</td></tr><tr><td   align="right" >4.One</td><td   align="left" >4.Two</td><td   align="center" >4.Three</td></tr></tbody></table>
+    <table><thead><tr><th align="right" >Column 1</th><th align="left" >Column 2</th><th align="center" >Column 3</th></tr></thead><tbody><tr><td rowspan="2" colspan="2" align="right" style="vertical-align: middle;" >1.One</td><td align="center" >1.Three</td></tr><tr><td align="center" >2.Three</td></tr><tr><td align="right" >3.One</td><td align="left" >3.Two</td><td align="center" >3.Three</td></tr><tr><td align="right" >4.One</td><td align="left" >4.Two</td><td align="center" >4.Three</td></tr></tbody></table>
 </div>
 
 
@@ -3215,14 +3281,14 @@ One       | Two       | Three</pre>
 
 <div class="table" id="table-3-7">
     
-    <table><thead><tr><th   >Column 1</th><th   >Column 2</th><th   >Column 3</th></tr></thead><tbody><tr><td   >One</td><td   >Two</td><td   ><p>Tree:</p>
+    <table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody><tr><td>One</td><td>Two</td><td><p>Tree:</p>
 
 <ul>
 <li><p>Three</p></li>
 <li><p>Three continued</p></li>
 <li><p>Three continued 2</p></li>
 </ul>
-</td></tr><tr><td   >One</td><td   >Two</td><td   >Three</td></tr></tbody></table>
+</td></tr><tr><td>One</td><td>Two</td><td>Three</td></tr></tbody></table>
 </div>
 
 
@@ -3241,7 +3307,7 @@ One 2     | Two 2     | Three 2</pre>
 
 <div class="table" id="table-3-8">
     
-    <table><tbody><tr><td   >One 1</td><td   >Two 1</td><td   >Three 1</td></tr><tr><td   >One 2</td><td   >Two 2</td><td   >Three 2</td></tr></tbody></table>
+    <table><tbody><tr><td>One 1</td><td>Two 1</td><td>Three 1</td></tr><tr><td>One 2</td><td>Two 2</td><td>Three 2</td></tr></tbody></table>
 </div>
 
 
@@ -3257,7 +3323,7 @@ One 2     | Two 2     | Three 2
 
 <div class="table" id="table-3-9">
     
-    <table><tbody><tr><th   ><strong>One 1</strong></th><td   >Two 1</td><td   >Three 1</td></tr><tr><td   >One 2</td><td   >Two 2</td><td   >Three 2</td></tr><tr><th   ><strong>One 3</strong></th><td   >Two 3</td><td   >Three 3</td></tr></tbody></table>
+    <table><tbody><tr><th><strong>One 1</strong></th><td>Two 1</td><td>Three 1</td></tr><tr><td>One 2</td><td>Two 2</td><td>Three 2</td></tr><tr><th><strong>One 3</strong></th><td>Two 3</td><td>Three 3</td></tr></tbody></table>
 </div>
 
 
@@ -3274,7 +3340,7 @@ One 4     | Two 4     | Three 4</pre>
 
 <div class="table" id="table-3-10">
     
-    <table><tbody><tr><th  colspan="3" ><strong>One 1</strong></th></tr><tr><td   >One 2</td><td   >Two 2</td><td   >Three 2</td></tr><tr><th  colspan="3" ><strong>One 3</strong></th></tr><tr><td   >One 4</td><td   >Two 4</td><td   >Three 4</td></tr></tbody></table>
+    <table><tbody><tr><th colspan="3"><strong>One 1</strong></th></tr><tr><td>One 2</td><td>Two 2</td><td>Three 2</td></tr><tr><th colspan="3"><strong>One 3</strong></th></tr><tr><td>One 4</td><td>Two 4</td><td>Three 4</td></tr></tbody></table>
 </div>
 
 
@@ -3320,11 +3386,10 @@ the following markup:</p>
 <div class="admonition note">
   <h5 id="what-are-trefoil-markers-2">What are Trefoil markers?</h5>
   
-  <p>Trefoil markers are a kind of function call wich produces <a class="auto-index-term" id="auto-index-term-410646757-html-17">HTML</a> code to be 
-  processed later. They are similar to <code>Twig</code> function calls but are enclosed 
-  between <code>{@ ... @}</code> delimiters.</p>
-  
-  <p>The &#8220;======&#8221; series between the opening <code>{@</code> and the function name is an optional
+  <p>Trefoil markers are a kind of function call wich produces <a class="auto-index-term" id="auto-index-term-410646757-html-17">HTML</a> code to be
+  processed later. They are similar to <code>Twig</code> function calls but are enclosed
+  between <code>{@ ... @}</code> delimiters.
+  The &#8220;======&#8221; series between the opening <code>{@</code> and the function name is an optional
   delimiter to help visually identifiying the block in the text.</p>
 </div>
 
@@ -3352,7 +3417,7 @@ the requirements of the format being rendered.</p>
 
 <div class="table" id="table-3-11">
     
-    <table><thead><tr><th   >CategoryA</th><th   >CategoryB</th><th   >Attribute 1</th><th   >Attribute 2</th></tr></thead><tbody><tr><td rowspan="2"  style="vertical-align: top;" >A1</td><td   >B1</td><td   >A1.B1.1.1</td><td   >A1.B1.2.1</td></tr><tr><td   >B2</td><td   >A1.B2.1.2</td><td   >A1.B2.2.2</td></tr><tr><td rowspan="2"  style="vertical-align: top;" >A2</td><td   >B3</td><td   >A2.B3.1.3</td><td   >A1.B3.2.3</td></tr><tr><td   >B4</td><td   >A2.B4.1.4</td><td   >A1.B4.2.4</td></tr></tbody></table>
+    <table><thead><tr><th>CategoryA</th><th>CategoryB</th><th>Attribute 1</th><th>Attribute 2</th></tr></thead><tbody><tr><td rowspan="2" style="vertical-align: top;" >A1</td><td>B1</td><td>A1.B1.1.1</td><td>A1.B1.2.1</td></tr><tr><td>B2</td><td>A1.B2.1.2</td><td>A1.B2.2.2</td></tr><tr><td rowspan="2" style="vertical-align: top;" >A2</td><td>B3</td><td>A2.B3.1.3</td><td>A1.B3.2.3</td></tr><tr><td>B4</td><td>A2.B4.1.4</td><td>A1.B4.2.4</td></tr></tbody></table>
 </div>
 
 
@@ -3399,19 +3464,19 @@ as <a class="auto-index-term" id="auto-index-term-410646757-html-19">HTML</a> ta
 <p>We call the above list a <strong>tabularlist</strong>, because it is a list which can be 
 <em>tabularized</em> (converted to table) and get the following results:</p>
 
-<table><thead><tr><th   >CategoryA</th><th   >CategoryB</th><th   >Attribute 1</th><th   >Attribute 2</th></tr></thead><tbody><tr><td   rowspan="2" style="vertical-align: top;" >A1
+<table><thead><tr><th>CategoryA</th><th>CategoryB</th><th>Attribute 1</th><th>Attribute 2</th></tr></thead><tbody><tr><td rowspan="2" style="vertical-align: top;" >A1
 
-</td><td   >B1
+</td><td>B1
 
-</td><td   >A1.B1.1.1</td><td   >A1.B1.2.1</td></tr><tr><td   >B2
+</td><td>A1.B1.1.1</td><td>A1.B1.2.1</td></tr><tr><td>B2
 
-</td><td   >A1.B2.1.2</td><td   >A1.B2.2.2</td></tr><tr><td   rowspan="2" style="vertical-align: top;" >A2
+</td><td>A1.B2.1.2</td><td>A1.B2.2.2</td></tr><tr><td rowspan="2" style="vertical-align: top;" >A2
 
-</td><td   >B3
+</td><td>B3
 
-</td><td   >A2.B3.1.3</td><td   >A2.B3.2.3</td></tr><tr><td   >B4
+</td><td>A2.B3.1.3</td><td>A2.B3.2.3</td></tr><tr><td>B4
 
-</td><td   >A2.B4.1.4</td><td   >A2.B4.2.4</td></tr></tbody></table>
+</td><td>A2.B4.1.4</td><td>A2.B4.2.4</td></tr></tbody></table>
 
 <p>&#8230;wich is exactly the target table. But the source for the above rendering is just our input list
 surrounded with the appropriate markup:</p>
@@ -3511,13 +3576,13 @@ are rendered with two columns.</p></li>
 
 <p><strong>1 column</strong>:</p>
 
-<table><thead><tr><th   >CategoryA</th></tr></thead><tbody><tr><td   >A1
+<table><thead><tr><th>CategoryA</th></tr></thead><tbody><tr><td>A1
 
 <ul><li><p><strong>CategoryB</strong>: B1
 
 </p></li><li style="list-style: none; display: inline"><ul><li><p><strong>Attribute 1</strong>: A1.B1.1.1</p></li><li><p><strong>Attribute 2</strong>: A1.B1.2.1</p></li></ul></li><li><p><strong>CategoryB</strong>: B2
 
-</p></li><li style="list-style: none; display: inline"><ul><li><p><strong>Attribute 1</strong>: A1.B2.1.2</p></li><li><p><strong>Attribute 2</strong>: A1.B2.2.2</p></li></ul></li></ul></td></tr><tr><td   >A2
+</p></li><li style="list-style: none; display: inline"><ul><li><p><strong>Attribute 1</strong>: A1.B2.1.2</p></li><li><p><strong>Attribute 2</strong>: A1.B2.2.2</p></li></ul></li></ul></td></tr><tr><td>A2
 
 <ul><li><p><strong>CategoryB</strong>: B3
 
@@ -3527,51 +3592,51 @@ are rendered with two columns.</p></li>
 
 <p><strong>2 columns</strong>:</p>
 
-<table><thead><tr><th   >CategoryA</th><th   >CategoryB</th></tr></thead><tbody><tr><td   rowspan="2" style="vertical-align: top;" >A1
+<table><thead><tr><th>CategoryA</th><th>CategoryB</th></tr></thead><tbody><tr><td rowspan="2" style="vertical-align: top;" >A1
 
-</td><td   >B1
+</td><td>B1
 
-<ul><li><p><strong>Attribute 1</strong>: A1.B1.1.1</p></li><li><p><strong>Attribute 2</strong>: A1.B1.2.1</p></li></ul></td></tr><tr><td   >B2
+<ul><li><p><strong>Attribute 1</strong>: A1.B1.1.1</p></li><li><p><strong>Attribute 2</strong>: A1.B1.2.1</p></li></ul></td></tr><tr><td>B2
 
-<ul><li><p><strong>Attribute 1</strong>: A1.B2.1.2</p></li><li><p><strong>Attribute 2</strong>: A1.B2.2.2</p></li></ul></td></tr><tr><td   rowspan="2" style="vertical-align: top;" >A2
+<ul><li><p><strong>Attribute 1</strong>: A1.B2.1.2</p></li><li><p><strong>Attribute 2</strong>: A1.B2.2.2</p></li></ul></td></tr><tr><td rowspan="2" style="vertical-align: top;" >A2
 
-</td><td   >B3
+</td><td>B3
 
-<ul><li><p><strong>Attribute 1</strong>: A2.B3.1.3</p></li><li><p><strong>Attribute 2</strong>: A2.B3.2.3</p></li></ul></td></tr><tr><td   >B4
+<ul><li><p><strong>Attribute 1</strong>: A2.B3.1.3</p></li><li><p><strong>Attribute 2</strong>: A2.B3.2.3</p></li></ul></td></tr><tr><td>B4
 
 <ul><li><p><strong>Attribute 1</strong>: A2.B4.1.4</p></li><li><p><strong>Attribute 2</strong>: A2.B4.2.4</p></li></ul></td></tr></tbody></table>
 
 <p><strong>3 columns</strong>:</p>
 
-<table><thead><tr><th   >CategoryA</th><th   >CategoryB</th><th   >Attribute 1</th></tr></thead><tbody><tr><td   rowspan="4" style="vertical-align: top;" >A1
+<table><thead><tr><th>CategoryA</th><th>CategoryB</th><th>Attribute 1</th></tr></thead><tbody><tr><td rowspan="4" style="vertical-align: top;" >A1
 
-</td><td   rowspan="2" style="vertical-align: top;" >B1
+</td><td rowspan="2" style="vertical-align: top;" >B1
 
-</td><td   >A1.B1.1.1</td></tr><tr><td   >A1.B1.2.1</td></tr><tr><td   rowspan="2" style="vertical-align: top;" >B2
+</td><td>A1.B1.1.1</td></tr><tr><td>A1.B1.2.1</td></tr><tr><td rowspan="2" style="vertical-align: top;" >B2
 
-</td><td   >A1.B2.1.2</td></tr><tr><td   >A1.B2.2.2</td></tr><tr><td   rowspan="4" style="vertical-align: top;" >A2
+</td><td>A1.B2.1.2</td></tr><tr><td>A1.B2.2.2</td></tr><tr><td rowspan="4" style="vertical-align: top;" >A2
 
-</td><td   rowspan="2" style="vertical-align: top;" >B3
+</td><td rowspan="2" style="vertical-align: top;" >B3
 
-</td><td   >A2.B3.1.3</td></tr><tr><td   >A2.B3.2.3</td></tr><tr><td   rowspan="2" style="vertical-align: top;" >B4
+</td><td>A2.B3.1.3</td></tr><tr><td>A2.B3.2.3</td></tr><tr><td rowspan="2" style="vertical-align: top;" >B4
 
-</td><td   >A2.B4.1.4</td></tr><tr><td   >A2.B4.2.4</td></tr></tbody></table>
+</td><td>A2.B4.1.4</td></tr><tr><td>A2.B4.2.4</td></tr></tbody></table>
 
 <p><strong>4 columns, same as the default</strong>:</p>
 
-<table><thead><tr><th   >CategoryA</th><th   >CategoryB</th><th   >Attribute 1</th><th   >Attribute 2</th></tr></thead><tbody><tr><td   rowspan="2" style="vertical-align: top;" >A1
+<table><thead><tr><th>CategoryA</th><th>CategoryB</th><th>Attribute 1</th><th>Attribute 2</th></tr></thead><tbody><tr><td rowspan="2" style="vertical-align: top;" >A1
 
-</td><td   >B1
+</td><td>B1
 
-</td><td   >A1.B1.1.1</td><td   >A1.B1.2.1</td></tr><tr><td   >B2
+</td><td>A1.B1.1.1</td><td>A1.B1.2.1</td></tr><tr><td>B2
 
-</td><td   >A1.B2.1.2</td><td   >A1.B2.2.2</td></tr><tr><td   rowspan="2" style="vertical-align: top;" >A2
+</td><td>A1.B2.1.2</td><td>A1.B2.2.2</td></tr><tr><td rowspan="2" style="vertical-align: top;" >A2
 
-</td><td   >B3
+</td><td>B3
 
-</td><td   >A2.B3.1.3</td><td   >A2.B3.2.3</td></tr><tr><td   >B4
+</td><td>A2.B3.1.3</td><td>A2.B3.2.3</td></tr><tr><td>B4
 
-</td><td   >A2.B4.1.4</td><td   >A2.B4.2.4</td></tr></tbody></table>
+</td><td>A2.B4.1.4</td><td>A2.B4.2.4</td></tr></tbody></table>
 
 <p>The <a class="auto-index-term" id="auto-index-term-3916310420-plugin-46">plugin</a> tries its best to produce a readable table which is consistent with the 
 input tabularlist.</p>
@@ -3892,8 +3957,6 @@ book</span>:<span class="co4">
 <li>any <code>book</code> or <code>edition</code> config variable.</li>
 </ul>
 
-<div class="page-break"></div>
-
 <h2 id="epubcheckplugin">4.2 EpubCheckPlugin</h2>
 
 <p>This <a class="auto-index-term" id="auto-index-term-3916310420-plugin-57">plugin</a> checks the generated epub ebook using the <code>EpubCheck</code> utility.
@@ -3933,8 +3996,6 @@ You can also pass some options via the <code>epubcheck.command_options</code> op
 
 <p>The <a class="auto-index-term" id="auto-index-term-3916310420-plugin-59">plugin</a> will generate a report in the output directory called <code>report-EpubCheckPlugin.txt</code>.</p>
 
-<div class="page-break"></div>
-
 <h2 id="epubuncompressplugin">4.3 EpubUncompressPlugin</h2>
 
 <p>This <a class="auto-index-term" id="auto-index-term-3916310420-plugin-60">plugin</a> uncompresses the geneated <code>book.epub</code> file to make it easy looking 
@@ -3962,8 +4023,6 @@ book</span>:<span class="co4">
 
 <p>The uncompressed contents are left into the same directory where the <code>book.epub</code> 
 file is generated.</p>
-
-<div class="page-break"></div>
 
 <h2 id="linkcheckplugin">4.4 LinkCheckPlugin</h2>
 
@@ -4015,8 +4074,6 @@ the book&#8217;s `config.yml&#8217; .</p>
 <h3 id="output-2">4.4.4 Output</h3>
 
 <p>The <a class="auto-index-term" id="auto-index-term-3916310420-plugin-64">plugin</a> will generate a report in the output directory called <code>report-LinkCheckPlugin.txt</code>.</p>
-
-<div class="page-break"></div>
 
 <h2 id="qualitycontrolplugin">4.5 QualityControlPlugin</h2>
 
@@ -4075,8 +4132,6 @@ other hand, is correctly emphasized):</p>
 <h3 id="output-3">4.5.4 Output</h3>
 
 <p>The <a class="auto-index-term" id="auto-index-term-3916310420-plugin-68">plugin</a> will generate a report in the output directory called <code>report-QualityCheckPlugin.txt</code>.</p>
-
-<div class="page-break"></div>
 
 <h2 id="versionupdaterplugin">4.6 VersionUpdaterPlugin</h2>
 
@@ -4137,8 +4192,6 @@ book is generated.</p>
   to generate a &#8220;ready to publish&#8221; ebook. 
   Taking advantage of the editions inheritance make it even more convenient.</p>
 </div>
-
-<div class="page-break"></div>
 
 </div>
 
@@ -4345,8 +4398,6 @@ be converted into glossary terms.</li>
 
 <p>The <a class="auto-index-term" id="auto-index-term-3916310420-plugin-74">plugin</a> will generate a report in the output directory called <code>report-AutoGlossaryPlugin.txt</code>
 with a summary of terms processed and problems found.</p>
-
-<div class="page-break"></div>
 
 <h2 id="autoindexplugin">5.2 AutoIndexPlugin</h2>
 
@@ -4574,8 +4625,6 @@ And also, a second time bold marking: the <a class="auto-index-term" id="auto-in
 
 <p>The <a class="auto-index-term" id="auto-index-term-3916310420-plugin-78">plugin</a> will generate a report in the output directory called <code>report-AutoIndexPlugin.txt</code>
 with a summary of terms processed and problems found.</p>
-
-<div class="page-break"></div>
 
 <h2 id="ebookquizplugin">5.3 EbookQuizPlugin</h2>
 
@@ -5292,7 +5341,1538 @@ Questionnaire: quiz-id-3
 </div>
 
 
-<div class="page-break"></div>
+</div>
+
+                            <div class="item chapter">
+    <h1 id="the-trefoil-content-generation-plugins"><span>Chapter 6</span> The Trefoil content generation plugins</h1>
+    <p class="has-dropcaps"><span class="dropcaps">T</span>his chapter describes the <em>content generation plugins</em>. These plugins
+provide a way to automatically generate content for your book.</p>
+
+
+    <div class="btn-group visible-xs visible-sm">
+
+                
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+            In this chapter:
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+                                                                                                                                                                                                                                                                    <li class="chapter level-2">
+        <a href="#wordsearchplugin">
+                            <span>6.1</span> - WordSearchPlugin
+                    </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+    </div>
+
+
+<h2 id="wordsearchplugin">6.1 WordSearchPlugin</h2>
+
+<p>This <a class="auto-index-term" id="auto-index-term-3916310420-plugin-88">plugin</a> allows generating <em>wordsearch puzzles</em> automatically, like the following one:</p>
+
+<div class="wordsearch wordsearch-puzzle-container" data-id="1"><div class="wordsearch-title"></div><div class="wordsearch-text"></div><div class="wordsearch-text2"></div><div class="wordsearch-difficulty">Difficulty: Medium</div><div class="wordsearch-puzzle"><table><tbody><tr><td>F</td><td>Y</td><td>S</td><td>U</td><td>N</td><td>D</td><td>A</td><td>Y</td><td>Y</td><td>P</td></tr><tr><td>J</td><td>A</td><td>A</td><td>W</td><td>M</td><td>E</td><td>D</td><td>Y</td><td>W</td><td>W</td></tr><tr><td>Q</td><td>D</td><td>H</td><td>D</td><td>H</td><td>P</td><td>A</td><td>M</td><td>E</td><td>L</td></tr><tr><td>Y</td><td>S</td><td>H</td><td>P</td><td>S</td><td>D</td><td>E</td><td>D</td><td>E</td><td>B</td></tr><tr><td>U</td><td>E</td><td>B</td><td>L</td><td>R</td><td>R</td><td>N</td><td>E</td><td>Z</td><td>A</td></tr><tr><td>E</td><td>U</td><td>F</td><td>U</td><td>P</td><td>E</td><td>U</td><td>I</td><td>I</td><td>R</td></tr><tr><td>C</td><td>T</td><td>T</td><td>U</td><td>S</td><td>E</td><td>X</td><td>H</td><td>G</td><td>Z</td></tr><tr><td>E</td><td>A</td><td>V</td><td>D</td><td>X</td><td>K</td><td>N</td><td>L</td><td>T</td><td>Z</td></tr><tr><td>S</td><td>T</td><td>A</td><td>S</td><td>Y</td><td>A</td><td>D</td><td>N</td><td>O</td><td>M</td></tr><tr><td>I</td><td>Y</td><td>Y</td><td>A</td><td>D</td><td>I</td><td>R</td><td>F</td><td>M</td><td>Z</td></tr></tbody></table></div></div>
+
+<div class="wordsearch wordsearch-wordlist" data-id="1"><ul class="chunk-1-1"><li>MONDAY</li><li>TUESDAY</li><li>WEDNESDAY</li><li>THURSDAY</li><li>FRIDAY</li><li>SATURDAY</li><li>SUNDAY</li></ul></div>
+
+<div class="clearfix"></div>
+
+<h3 id="availability-23">6.1.1 Availability</h3>
+
+<p>This <a class="auto-index-term" id="auto-index-term-3916310420-plugin-89">plugin</a> is available for all editions.</p>
+
+<h3 id="usage-24">6.1.2 Usage</h3>
+
+<div class="code yaml">
+<pre class="markdown"># &lt;book-dir&gt;/config.yml
+book:
+    editions:
+        &lt;edition-name&gt;
+            plugins:
+                enabled: [ WordSearch ]       
+                options:
+                    WordSearch:
+                        grid_size: 20
+                        solution_grid_size: 10
+                        highlight_type: shadow
+                        word_files:
+                          - { label: my_label_1, name: my/words/file/path/and/name_1.txt }
+                          - { label: my_label_n, name: my/words/file/path/and/name_n.txt }
+                        default:
+                          filler: &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+                          difficulty: &quot;medium&quot;
+                        strings:
+                          title: &quot;&quot;
+                          solution_title: &quot;&quot;
+                          text: &quot;&quot; 
+                          text2: &quot;&quot;
+                          difficulty:
+                            easy: &quot;Dificulty: Easy&quot;
+                            medium: &quot;Dificulty: Medium&quot;
+                            hard: &quot;Dificulty: Hard&quot;
+                            very-hard: &quot;Dificulty: Very Hard&quot;</pre>
+</div>
+
+<h4 id="plugin-options">6.1.2.1 <a class="auto-index-term" id="auto-index-term-3916310420-plugin-90">Plugin</a> options</h4>
+
+<p>This is a complex <a class="auto-index-term" id="auto-index-term-3916310420-plugin-91">plugin</a> with lots of options to allow extensive customization. All of them are optional and have
+sensible defaults that are shown in the previous YAML block.</p>
+
+<ul>
+<li><code>grid_size</code>: Size of the puzzle grid in pixels.</li>
+<li><code>solution_grid_size</code>: Size of the solution grid in pixels.</li>
+<li><code>highlight_type</code>: The highlight type of the solution. Either <code>line</code> or <code>shadow</code>.</li>
+<li><code>word_files</code>: Labels for the word files to use with the automatic word selection feature. The name can include a path
+and its relative to the book&#8217;s <code>Content</code> directory.</li>
+<li><code>default</code>: Some default values to use.
+
+<ul>
+<li><code>filler</code>: A string with all the letters or signs to use as filler for empty puzzle places.</li>
+<li><code>difficulty</code>: The puzzle difficulty. Either <code>easy</code>, <code>medium</code>, <code>hard</code>, or <code>very-hard</code>.</li>
+</ul></li>
+<li><code>string</code>: Some string used on the puzzle and solution rendering.
+
+<ul>
+<li><code>easy</code>: Text for easy puzzles.</li>
+<li><code>medium</code>: Text for medium puzzles.</li>
+<li><code>hard</code>: Text for hard puzzles.</li>
+<li><code>very-hard</code>: Text for very hard puzzles.</li>
+</ul></li>
+</ul>
+
+<p>This feature uses several <em>trefoil markers</em> to achieve it complex functionality.</p>
+
+<div class="admonition note">
+  <h5 id="what-are-trefoil-markers-3">What are Trefoil markers?</h5>
+  
+  <p>Trefoil markers are a kind of function call wich produces <a class="auto-index-term" id="auto-index-term-410646757-html-30">HTML</a> code to be
+  processed later. They are similar to <code>Twig</code> function calls but are enclosed
+  between <code>{@ ... @}</code> delimiters.
+  The &#8220;======&#8221; series between the opening <code>{@</code> and the function name is an optional
+  delimiter to help visually identifiying the block in the text.</p>
+</div>
+
+<h4 id="case-1-word-search-with-explicit-words">6.1.2.2 Case 1: Word search with explicit words</h4>
+
+<div class="code html">
+<pre class="html5">{@ wordsearch_begin(id, {options} ) @}
+&nbsp;
+   ...list of words...
+&nbsp;
+{@ wordsearch_end() @}
+&nbsp;
+{@ wordsearch_wordlist(id, {options} ) @}    
+&nbsp;
+{@ wordsearch_solution(id, {options} ) @}</pre>
+</div>
+
+<p><strong>Arguments for <code>wordsearch_begin()</code></strong></p>
+
+<ul>
+<li><code>id</code>: A numeric identifier for a particular puzzle. It is used to link all the other trefoil marker calls together.</li>
+<li><p><code>options</code>: A list of argument in the form {key:value, &#8230; ,key:value}. They are:</p>
+
+<ul>
+<li><code>rows</code>: The number of rows of the puzzle.</li>
+<li><code>cols</code>: The number of columns of the puzzle.</li>
+<li><code>filler</code>: A string with all the letters or signs to use as filler for empty puzzle places.</li>
+<li><code>title</code>: The title of the puzzle.
+
+<ul>
+<li>It can include <a class="auto-index-term" id="auto-index-term-410646757-html-31">HTML</a> markup.</li>
+<li>The puzzle id can be included one or two times using sprintf syntax.</li>
+<li>Example: <code>&lt;span&gt;%s&lt;/span&gt;Puzzle&lt;span&gt;%s&lt;/span&gt;</code></li>
+</ul></li>
+<li><code>text</code>: A text to show before the puzzle. It can include <a class="auto-index-term" id="auto-index-term-410646757-html-32">HTML</a> markup.</li>
+<li><code>text2</code>: Another text. It can include <a class="auto-index-term" id="auto-index-term-410646757-html-33">HTML</a> markup.</li>
+<li><code>difficulty</code>: Difficulty of the puzzle. Either <code>easy</code>, <code>medium</code>, <code>hard</code>, or <code>very-hard</code>.</li>
+<li><code>seed</code>: The seed used for the pseudo-random numbers generator (see explanation below). If not provided, the
+pluting will generate a different puzzle on each run, so it is better to set a specific seed to get repeatable
+results.</li>
+</ul></li>
+<li><p><code>list of words</code> is a list with the words to use in the puzzle.</p></li>
+</ul>
+
+<div class="admonition note">
+  <h5 id="puzzle-difficulty">Puzzle difficulty</h5>
+  
+  <p>The puzzle difficulty can be graduated as follows:</p>
+  
+  <ul>
+  <li><p><code>easy</code>: Not very long words, never reversed.</p></li>
+  <li><p><code>medium</code>: Not very long words, with a few of them reversed.</p></li>
+  <li><p><code>hard</code>: Longer words, with a few of them reversed.</p></li>
+  <li><p><code>very-hard</code>: Longer words, always reversed.</p></li>
+  </ul>
+</div>
+
+<p><strong>Arguments for <code>wordsearch_wordlist()</code></strong></p>
+
+<ul>
+<li><code>id</code>: The id of the puzzle to show the wordlist.</li>
+<li><code>options</code> A list of argument in the form {key:value, &#8230; ,key:value}. They are:
+
+<ul>
+<li><code>sorted</code>: Whether the list should be shown sorted or unsorted. Default is unsorted.</li>
+<li><code>chunks</code>: The number of parts that the wordlist should be divided into. Useful for styling the list in columns.
+Default is 1.</li>
+</ul></li>
+</ul>
+
+<p><strong>Arguments for <code>wordsearch_solution()</code></strong></p>
+
+<ul>
+<li><code>id</code>: The id of the puzzle to show the wordlist.</li>
+<li><code>options</code> A list of argument in the form {key:value, &#8230; ,key:value}. They are:
+
+<ul>
+<li><code>title</code>: The title of the solution.
+
+<ul>
+<li>It can include <a class="auto-index-term" id="auto-index-term-410646757-html-34">HTML</a> markup.</li>
+<li>The puzzle id can be included one or two times using sprintf syntax.</li>
+<li>Example: <code>Soluton &lt;span&gt;%s&lt;/span&gt;</code></li>
+</ul></li>
+<li><code>text</code>: A text to show before the solution.
+
+<ul>
+<li>It can include <a class="auto-index-term" id="auto-index-term-410646757-html-35">HTML</a> markup.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<div class="admonition note">
+  <h5 id="about-pseudo-random-numbers-generation">About pseudo-random numbers generation</h5>
+  
+  <p>This <a class="auto-index-term" id="auto-index-term-3916310420-plugin-92">plugin</a> uses a pseudo-random number generator to generate all the needed variations.
+  The difference with a true random numbers generator is that, while the true random generator
+  will generate a true random sequence, the pseudo-random one will generate a repeatable sequence
+  that is only apparently random.<br />
+  Pseudo-random number generators use a &#8220;seed&#8221; to start the sequence. Two sequences using the
+  same seed will be identical.</p>
+</div>
+
+<p><strong>Example</strong></p>
+
+<div class="code html">
+<pre class="html5">{@ wordsearch_begin( 100, {
+        seed: 1,
+        rows: 10,
+        cols: 10,
+        title: 'This is the puzzle',
+        text: 'Days of the week in Spanish.',
+        text2: 'Find the words hidden between the letters.',
+        difficulty: 'hard'
+}) @}
+&nbsp;
+- Lunes
+- Martes
+- Miércoles
+- Jueves
+- Viernes
+- Sábado
+- Domingo
+&nbsp;
+{@ wordsearch_end() @}
+&nbsp;
+{@ wordsearch_wordlist( 100 ) @}
+&nbsp;
+{@ wordsearch_solution( 100, { title: 'This is the solution'} ) @}</pre>
+</div>
+
+<p>This will render as follows:</p>
+
+<div class="wordsearch wordsearch-puzzle-container" data-id="100"><div class="wordsearch-title">This is the puzzle</div><div class="wordsearch-text">Days of the week in Spanish.</div><div class="wordsearch-text2">Find the words hidden between the letters.</div><div class="wordsearch-difficulty">Difficulty: Hard</div><div class="wordsearch-puzzle"><table><tbody><tr><td>S</td><td>D</td><td>O</td><td>M</td><td>I</td><td>N</td><td>G</td><td>O</td><td>M</td><td>L</td></tr><tr><td>F</td><td>E</td><td>W</td><td>Z</td><td>Q</td><td>P</td><td>N</td><td>G</td><td>C</td><td>D</td></tr><tr><td>O</td><td>K</td><td>V</td><td>L</td><td>J</td><td>S</td><td>E</td><td>E</td><td>M</td><td>D</td></tr><tr><td>J</td><td>W</td><td>V</td><td>E</td><td>E</td><td>F</td><td>N</td><td>Y</td><td>J</td><td>B</td></tr><tr><td>Z</td><td>D</td><td>E</td><td>N</td><td>U</td><td>N</td><td>K</td><td>K</td><td>E</td><td>O</td></tr><tr><td>O</td><td>Q</td><td>U</td><td>E</td><td>Y</td><td>J</td><td>T</td><td>T</td><td>C</td><td>D</td></tr><tr><td>X</td><td>L</td><td>S</td><td>E</td><td>N</td><td>R</td><td>E</td><td>I</td><td>V</td><td>A</td></tr><tr><td>S</td><td>E</td><td>L</td><td>O</td><td>C</td><td>R</td><td>E</td><td>I</td><td>M</td><td>B</td></tr><tr><td>G</td><td>D</td><td>S</td><td>E</td><td>T</td><td>R</td><td>A</td><td>M</td><td>I</td><td>A</td></tr><tr><td>U</td><td>N</td><td>D</td><td>E</td><td>F</td><td>A</td><td>K</td><td>H</td><td>N</td><td>S</td></tr></tbody></table></div></div>
+
+<div class="wordsearch wordsearch-wordlist" data-id="100"><ul class="chunk-1-1"><li>LUNES</li><li>MARTES</li><li>MIÉRCOLES</li><li>JUEVES</li><li>VIERNES</li><li>SÁBADO</li><li>DOMINGO</li></ul></div>
+
+<div class="clearfix"></div>
+
+<div class="wordsearch wordsearch-solution-container" data-id="100"><div class="wordsearch-title">This is the solution</div><div class="wordsearch-text"></div><div class="wordsearch-solution"><table><tbody><tr><td class="cell-letter cell-diagonal-down-begin" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-horizontal-begin" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    M
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    G
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    M
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    L
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    F
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    W
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    Z
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    Q
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    P
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    G
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    V
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    L
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    J
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up-end" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    M
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    J
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    W
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    V
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    F
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    Y
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    J
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    B
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    Z
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical-begin" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    Q
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    Y
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-diagonal-down-end" ><div class="cell-inner">
+    J
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    X
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-diagonal-up-begin" ><div class="cell-inner">
+    L
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-begin" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-horizontal-end" ><div class="cell-inner">
+    V
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-letter cell-horizontal-begin" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    L
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-horizontal-end" ><div class="cell-inner">
+    M
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    B
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    G
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-begin" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-horizontal-end" ><div class="cell-inner">
+    M
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    F
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    H
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-vertical-end" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr></tbody></table></div></div>
+
+<div class="clearfix"></div>
+
+<h4 id="case-2-word-search-with-random-words-from-file">6.1.2.3 Case 2: Word search with random words from file</h4>
+
+<div class="code html">
+<pre class="html5">{@ wordsearch(id, {options} ) @}
+&nbsp;
+{@ wordsearch_wordlist(id, {options} ) @}    
+&nbsp;
+{@ wordsearch_solution(id, {options} ) @}</pre>
+</div>
+
+<p><strong>Arguments for <code>wordsearch()</code></strong></p>
+
+<p>This marker accepts the same arguments as <code>wordsearch_begin()</code> but needs additional arguments:</p>
+
+<ul>
+<li><code>options</code>:
+
+<ul>
+<li><code>word_file</code>: The label of a file with words to choose from, as specified in the <a class="auto-index-term" id="auto-index-term-3916310420-plugin-93">plugin</a> options. If no file is
+specified the marker will generate a puzzle with a default content (useful for quick testing);</li>
+<li><code>number_of_words</code> : The number of words to randomly select from the file.</li>
+</ul></li>
+</ul>
+
+<p><strong>Arguments for <code>wordsearch_wordlist()</code></strong></p>
+
+<p>Same usage as in the previous case.</p>
+
+<p><strong>Arguments for <code>wordsearch_solution()</code></strong></p>
+
+<p>Same usage as in the previous case.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Assuming that <code>config.yml</code> contains:</p>
+
+<div class="code yaml">
+<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
+book</span><span class="sy2">:
+</span>    <span class="sy1">...</span><span class="co4">
+    plugins</span><span class="sy2">:
+</span>        <span class="sy1">...</span><span class="co4">
+        options</span>:<span class="co4">
+            WordSearch</span><span class="sy2">:
+</span>                <span class="sy1">...</span><span class="co4">
+                word_files</span>:<span class="co3">
+                    - { label</span><span class="sy2">: </span>word_file_1, name<span class="sy2">: </span>word_file_1.txt <span class="br0">&#125;</span>
+                <span class="sy1">...</span></pre>
+</div>
+
+<p>And the following code:</p>
+
+<div class="code html">
+<pre class="html5">{@ wordsearch( 101, {
+        seed: 1,
+        rows: 10,
+        cols: 10,
+        title: 'This is the puzzle number %s',
+        text: 'Days of the week in Spanish.',
+        text2: 'Find the words hidden between the letters.',
+        difficulty: 'hard',
+        word_file: 'word_file_1',
+        number_of_words: 10
+        }) @}
+&nbsp;
+{@ wordsearch_wordlist( 101 ) @}
+&nbsp;
+{@ wordsearch_solution( 101, { title: 'Solution %s'} ) @}</pre>
+</div>
+
+<p>This will render as follows:</p>
+
+<div class="wordsearch wordsearch-puzzle-container" data-id="101"><div class="wordsearch-title">This is the puzzle number 101</div><div class="wordsearch-text">Days of the week in Spanish.</div><div class="wordsearch-text2">Find the words hidden between the letters.</div><div class="wordsearch-difficulty">Difficulty: Hard</div><div class="wordsearch-puzzle"><table><tbody><tr><td>A</td><td>D</td><td>E</td><td>Q</td><td>U</td><td>A</td><td>T</td><td>E</td><td>S</td><td>F</td></tr><tr><td>S</td><td>C</td><td>I</td><td>H</td><td>N</td><td>X</td><td>T</td><td>C</td><td>E</td><td>M</td></tr><tr><td>B</td><td>Z</td><td>C</td><td>T</td><td>K</td><td>U</td><td>W</td><td>N</td><td>R</td><td>N</td></tr><tr><td>V</td><td>P</td><td>S</td><td>O</td><td>L</td><td>C</td><td>O</td><td>A</td><td>I</td><td>U</td></tr><tr><td>A</td><td>F</td><td>F</td><td>O</td><td>R</td><td>D</td><td>I</td><td>V</td><td>U</td><td>P</td></tr><tr><td>S</td><td>K</td><td>S</td><td>W</td><td>S</td><td>D</td><td>B</td><td>D</td><td>Q</td><td>S</td></tr><tr><td>A</td><td>B</td><td>R</td><td>O</td><td>A</td><td>D</td><td>I</td><td>A</td><td>C</td><td>K</td></tr><tr><td>A</td><td>D</td><td>D</td><td>I</td><td>T</td><td>I</td><td>O</td><td>N</td><td>A</td><td>L</td></tr><tr><td>A</td><td>D</td><td>D</td><td>R</td><td>E</td><td>S</td><td>S</td><td>X</td><td>G</td><td>N</td></tr><tr><td>A</td><td>D</td><td>V</td><td>E</td><td>N</td><td>T</td><td>U</td><td>R</td><td>E</td><td>O</td></tr></tbody></table></div></div>
+
+<div class="wordsearch wordsearch-wordlist" data-id="101"><ul class="chunk-1-1"><li>ADDITIONAL</li><li>ABROAD</li><li>ADVENTURE</li><li>ADEQUATE</li><li>AFFORD</li><li>ACQUIRE</li><li>ACCORDING</li><li>ADDRESS</li><li>ABSOLUTE</li><li>ADVANCE</li></ul></div>
+
+<div class="clearfix"></div>
+
+<div class="wordsearch wordsearch-solution-container" data-id="101"><div class="wordsearch-title">Solution 101</div><div class="wordsearch-text"></div><div class="wordsearch-solution"><table><tbody><tr><td class="cell-letter cell-start-word cell-diagonal-down-begin cell-horizontal-begin" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    Q
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end cell-diagonal-up-end cell-vertical-begin" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    F
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    H
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    X
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical-begin" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    M
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    B
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    Z
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    W
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    V
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    P
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    L
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-letter cell-start-word cell-horizontal-begin" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    F
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    F
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up cell-horizontal" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    V
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    P
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-filler" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    W
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    B
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    Q
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-letter cell-start-word cell-horizontal-begin" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-up cell-horizontal" ><div class="cell-inner">
+    B
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-vertical-end" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-vertical" ><div class="cell-inner">
+    C
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    K
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-letter cell-start-word cell-horizontal-begin cell-diagonal-up-begin" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    I
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal cell-diagonal-down" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-start-word cell-horizontal cell-vertical-end" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end" ><div class="cell-inner">
+    L
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-letter cell-start-word cell-horizontal-begin" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end" ><div class="cell-inner">
+    S
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    X
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-diagonal-down-end" ><div class="cell-inner">
+    G
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr><tr><td class="cell-letter cell-start-word cell-horizontal-begin" ><div class="cell-inner">
+    A
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    D
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    V
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    N
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    T
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    U
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal" ><div class="cell-inner">
+    R
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-letter cell-horizontal-end" ><div class="cell-inner">
+    E
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td><td class="cell-filler" ><div class="cell-inner">
+    O
+    <div class="cell-border-diagonal-down"></div>
+    <div class="cell-border-diagonal-up"></div>
+    <div class="cell-border-vertical"></div>
+    <div class="cell-border-horizontal"></div>
+</div></td></tr></tbody></table></div></div>
+
+<div class="clearfix"></div>
 
 </div>
 
@@ -5303,10 +6883,10 @@ Questionnaire: quiz-id-3
 </div>
 
                             <div class="item chapter">
-    <h1 id="themes-system-enhancements"><span>Chapter 6</span> Themes system enhancements</h1>
+    <h1 id="themes-system-enhancements"><span>Chapter 7</span> Themes system enhancements</h1>
     <p class="has-dropcaps"><span class="dropcaps">T</span>hemes functionality has been greatly enhanced in <strong>trefoil</strong>, 
 making them more flexible and easy to customize. Also, <strong>trefoil</strong> 
-<a class="auto-index-term" id="auto-index-term-2971905672-themes-23">themes</a> can provide not only CCS styles and <a class="auto-index-term" id="auto-index-term-410646757-html-30">HTML</a> <a class="auto-index-term" id="auto-index-term-3992704439-templates-11">templates</a> but 
+<a class="auto-index-term" id="auto-index-term-2971905672-themes-23">themes</a> can provide not only CCS styles and <a class="auto-index-term" id="auto-index-term-410646757-html-36">HTML</a> <a class="auto-index-term" id="auto-index-term-3992704439-templates-11">templates</a> but 
 also images and fonts.</p>
 
 
@@ -5320,25 +6900,25 @@ also images and fonts.</p>
         <ul class="dropdown-menu">
                                                                                                                                                                                                                                                                     <li class="chapter level-2">
         <a href="#trefoil-themes-2">
-                            <span>6.1</span> - Trefoil themes
+                            <span>7.1</span> - Trefoil themes
                     </a>
     </li>
 
                                                                                                                                                                                                                                             <li class="chapter level-2">
         <a href="#custom-themes">
-                            <span>6.2</span> - Custom themes
+                            <span>7.2</span> - Custom themes
                     </a>
     </li>
 
                                                                                                                                                                                                                 <li class="chapter level-2">
         <a href="#structure-of-a-theme">
-                            <span>6.3</span> - Structure of a theme
+                            <span>7.3</span> - Structure of a theme
                     </a>
     </li>
 
                                                                                                                                                                                                                 <li class="chapter level-2">
         <a href="#components-of-a-theme">
-                            <span>6.4</span> - Components of a theme
+                            <span>7.4</span> - Components of a theme
                     </a>
     </li>
 
@@ -5346,7 +6926,7 @@ also images and fonts.</p>
     </div>
 
 
-<h2 id="trefoil-themes-2">6.1 Trefoil themes</h2>
+<h2 id="trefoil-themes-2">7.1 Trefoil themes</h2>
 
 <p><strong>trefoil</strong> comes with some standard <a class="auto-index-term" id="auto-index-term-2971905672-themes-24">themes</a>:</p>
 
@@ -5355,7 +6935,7 @@ also images and fonts.</p>
 essays and other literary works.</p></li>
 <li><p><code>TrefoilTwo</code> is a modern <a class="auto-index-term" id="auto-index-term-2971905672-themes-9">theme</a>.</p></li>
 <li><p><code>TrefoilDoc</code> is used for generating this documentation. It is 
-based on <code>TrefoilTwo</code> but adds an <a class="auto-index-term" id="auto-index-term-410646757-html-31">HTML</a> edition <code>doc-website</code> that
+based on <code>TrefoilTwo</code> but adds an <a class="auto-index-term" id="auto-index-term-410646757-html-37">HTML</a> edition <code>doc-website</code> that
 uses <code>Twitter Bootstrap 3</code>.</p></li>
 </ul>
 
@@ -5363,18 +6943,18 @@ uses <code>Twitter Bootstrap 3</code>.</p></li>
 book&#8217;s <code>config.yml</code>:</p>
 
 <div class="code yaml">
-<pre class="markdown"># &lt;book-dir&gt;/config.yml
-book:
-    editions:
-        &lt;edition-name&gt;
-            theme: TrefoilTwo</pre>
+<pre class="yaml"><span class="co1"># &lt;book-dir&gt;/config.yml</span><span class="co4">
+book</span>:<span class="co4">
+    editions</span><span class="sy2">:
+</span>        &lt;edition-name&gt;<span class="co3">
+            theme</span><span class="sy2">: </span>TrefoilTwo</pre>
 </div>
 
 <p>The <a class="auto-index-term" id="auto-index-term-2971905672-themes-11">theme</a> definitions will be looked up into <code>&lt;trefoil-dir&gt;/app/Resources/Themes</code>. 
 If the <a class="auto-index-term" id="auto-index-term-2971905672-themes-12">theme</a> is not found there, <strong>trefoil</strong> will try to use an 
 standard <strong>easybook</strong> <a class="auto-index-term" id="auto-index-term-2971905672-themes-13">theme</a> of the same name. If that is also missing, 
 the standard <code>Base</code> <a class="auto-index-term" id="auto-index-term-2971905672-themes-14">theme</a> will be used, which is likely to cause 
-problems if you activated some <a class="auto-index-term" id="auto-index-term-3916310420-plugin-88">plugin</a> that requires a non-standard <a class="auto-index-term" id="auto-index-term-3992704439-templates-10">template</a>.</p>
+problems if you activated some <a class="auto-index-term" id="auto-index-term-3916310420-plugin-94">plugin</a> that requires a non-standard <a class="auto-index-term" id="auto-index-term-3992704439-templates-10">template</a>.</p>
 
 <div class="admonition note">
   <h5 id="note-17">Note</h5>
@@ -5385,7 +6965,7 @@ problems if you activated some <a class="auto-index-term" id="auto-index-term-39
   <a class="auto-index-term" id="auto-index-term-2971905672-themes-15">theme</a> to make use of its new features.</p>
 </div>
 
-<h2 id="custom-themes">6.2 Custom themes</h2>
+<h2 id="custom-themes">7.2 Custom themes</h2>
 
 <p><strong>trefoil</strong> allows creating custom <a class="auto-index-term" id="auto-index-term-2971905672-themes-27">themes</a>. Their structure is the same than 
 the standard <strong>trefoil</strong> <a class="auto-index-term" id="auto-index-term-2971905672-themes-28">themes</a> but can be created anywhere in the file system, 
@@ -5405,7 +6985,7 @@ the new optional argument <code>--themes_dir</code>:</p>
 <pre class="bash">book publish the-origin-of-species ebook --themes_dir=~<span class="sy0">/</span>themes<span class="sy0">/</span>trefoil</pre>
 </div>
 
-<h2 id="structure-of-a-theme">6.3 Structure of a <a class="auto-index-term" id="auto-index-term-2971905672-themes-18">theme</a></h2>
+<h2 id="structure-of-a-theme">7.3 Structure of a <a class="auto-index-term" id="auto-index-term-2971905672-themes-18">theme</a></h2>
 
 <p>A <a class="auto-index-term" id="auto-index-term-2971905672-themes-19">theme</a>, whether standard or custom, must follow this structure:</p>
 
@@ -5443,9 +7023,9 @@ the new optional argument <code>--themes_dir</code>:</p>
   custom <a class="auto-index-term" id="auto-index-term-2971905672-themes-30">themes</a>.</p>
 </div>
 
-<h2 id="components-of-a-theme">6.4 Components of a theme</h2>
+<h2 id="components-of-a-theme">7.4 Components of a theme</h2>
 
-<h3 id="contents">6.4.1 Contents</h3>
+<h3 id="contents">7.4.1 Contents</h3>
 
 <ul>
 <li><p><code>Common\Contents</code> directory contains default content for book items that 
@@ -5458,7 +7038,7 @@ that edition.</p></li>
 looked up into the standard <strong>easybook</strong> content directories (most likely, 
 the <code>Base</code> <a class="auto-index-term" id="auto-index-term-2971905672-themes-22">theme</a>).</p>
 
-<h3 id="fonts">6.4.2 Fonts</h3>
+<h3 id="fonts">7.4.2 Fonts</h3>
 
 <ul>
 <li><code>Common\Resources\Fonts</code> directory contains additional font files for the book.</li>
@@ -5481,14 +7061,14 @@ packed into the final book for a given edition with the following configuration:
 This is a useful technique for limiting the final size of an edition output by only 
 including the needed fonts.</p>
 
-<h3 id="templates">6.4.3 Templates</h3>
+<h3 id="templates">7.4.3 Templates</h3>
 
 <ul>
 <li><code>Common\Templates</code> directory contains <a class="auto-index-term" id="auto-index-term-3992704439-templates-12">templates</a> that are common to all editions.</li>
 <li><code>&lt;edition-type&gt;\Templates</code> directory contain <a class="auto-index-term" id="auto-index-term-3992704439-templates-13">templates</a> specific to that edition.</li>
 </ul>
 
-<h3 id="images">6.4.4 Images</h3>
+<h3 id="images">7.4.4 Images</h3>
 
 <ul>
 <li><code>Common\Resources\images</code> directory contains images that are common to all editions.</li>
@@ -5500,7 +7080,7 @@ including the needed fonts.</p>
 <code>images</code> files into the book contents (so beware of duplicated names). Images 
 per-edition type overwrite common images of the same name.</p>
 
-<h3 id="translations">6.4.5 Translations</h3>
+<h3 id="translations">7.4.5 Translations</h3>
 
 <ul>
 <li><p><code>Common\Resources\Translations</code> directory contains label files that are common 
@@ -5520,7 +7100,7 @@ that edition.</p></li>
 </div>
 
                             <div class="item chapter">
-    <h1 id="other-funcionality"><span>Chapter 7</span> Other funcionality</h1>
+    <h1 id="other-funcionality"><span>Chapter 8</span> Other funcionality</h1>
     
     <div class="btn-group visible-xs visible-sm">
 
@@ -5532,33 +7112,33 @@ that edition.</p></li>
         <ul class="dropdown-menu">
                                                                                                                                                                                                                                                                     <li class="chapter level-2">
         <a href="#content-exclusion">
-                            <span>7.1</span> - Content exclusion
+                            <span>8.1</span> - Content exclusion
                     </a>
     </li>
 
                                                                                                                                                                                                                                             <li class="chapter level-2">
         <a href="#content-filtering">
-                            <span>7.2</span> - Content filtering
+                            <span>8.2</span> - Content filtering
                     </a>
     </li>
 
                                                                                                                                                                                                                                                             <li class="chapter level-2">
         <a href="#config-import">
-                            <span>7.3</span> - Config import
+                            <span>8.3</span> - Config import
                     </a>
     </li>
 
-                                                                                                    </ul>
+                                                                                                                                                </ul>
     </div>
 
 
-<h2 id="content-exclusion">7.1 Content exclusion</h2>
+<h2 id="content-exclusion">8.1 Content exclusion</h2>
 
 <p>Some kinds of contents do not make sense for certain edition formats. 
 They will be automatically excluded:</p>
 
 <ul>
-<li><code>epub</code> ebooks usually do not include a visible table of contents (<a class="auto-index-term" id="auto-index-term-410646757-html-32">HTML</a> TOC), 
+<li><code>epub</code> ebooks usually do not include a visible table of contents (<a class="auto-index-term" id="auto-index-term-410646757-html-38">HTML</a> TOC), 
 as reader apps and devices heavily rely on the navigational TOC. But it could 
 make sense to include it on certain situations, so a <code>config.yml</code> parameter
 could be added to explicitly request it:</li>
@@ -5573,7 +7153,7 @@ book:
             include_html_toc: true # An HTML TOC will be included</pre>
 </div>
 
-<h2 id="content-filtering">7.2 Content filtering</h2>
+<h2 id="content-filtering">8.2 Content filtering</h2>
 
 <p>For books with several editions may be convenient to have a way to include
 some content in just one of them and not in the others, or to include
@@ -5602,7 +7182,7 @@ book:
         - { element: chapter, number: 1, content: chapter1.md }</pre>
 </div>
 
-<h4 id="syntax">7.2.0.1 Syntax</h4>
+<h4 id="syntax">8.2.0.1 Syntax</h4>
 
 <p>For a content item, the following options can be added:</p>
 
@@ -5612,21 +7192,28 @@ book:
 contain the item.</p></li>
 </ul>
 
-<p>Prefixing the edition or format value witn <code>!</code> will negate it.</p>
+<p>Prefixing the edition or format value with <code>not-</code> will negate it.</p>
+
+<div class="admonition note">
+  <h5 id="note-19">Note</h5>
+  
+  <p>In previous versions the negation prefix was &#8216;!&#8217;. This was changed because of a conflict
+  with the new &#8220;custom tags&#8221; feature of the Yaml parser.</p>
+</div>
 
 <p>Example:</p>
 
 <ul>
 <li><code>editions: [ebook, kindle]</code> ==> only <code>ebook</code> and <code>kindle</code> editions.</li>
-<li><code>editions: [!print]</code> ==> all editions except <code>print</code>.</li>
+<li><code>editions: [not-print]</code> ==> all editions except <code>print</code>.</li>
 <li><code>formats: [epub, mobi]</code> ==> only editions with <code>epub</code> or <code>mobi</code> format.</li>
-<li><code>formats: [!pdf]</code> ==> all editions except those with <code>pdf</code> format.</li>
+<li><code>formats: [not-pdf]</code> ==> all editions except those with <code>pdf</code> format.</li>
 </ul>
 
 <p>If both <code>editions</code> and <code>formats</code> are used in the same item, it will only be included
 in editions that fulfill both sets of conditions.</p>
 
-<h2 id="config-import">7.3 Config import</h2>
+<h2 id="config-import">8.3 Config import</h2>
 
 <p>In some cases may be convenient to being able to somehow &#8220;import&#8221; some book config 
 definitions into our book config, to avoid repeating common values.</p>
@@ -5700,7 +7287,7 @@ in which the &#8220;local&#8221; definitions will be merged in.</p>
     <p>This is the book index. Each term has one or more links to its usages in the contents.</p>
 
 <div class="admonition note">
-  <h6 id="note-19">Note</h6>
+  <h6 id="note-20">Note</h6>
   
   <p>The automatic index functionality is intended for printed media (<code>pdf</code>format).
   While it still works in <code>epub</code>, <code>mobi</code> and <code>html</code> editions, the results may not
@@ -5811,6 +7398,12 @@ in which the &#8220;local&#8221; definitions will be merged in.</p>
                                     <a href="#auto-index-term-410646757-html-30">[&#8618;]</a>
                                     <a href="#auto-index-term-410646757-html-31">[&#8618;]</a>
                                     <a href="#auto-index-term-410646757-html-32">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-33">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-34">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-35">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-36">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-37">[&#8618;]</a>
+                                    <a href="#auto-index-term-410646757-html-38">[&#8618;]</a>
                 
             </div>
                                                                 <h5>M</h5>
@@ -5949,6 +7542,12 @@ in which the &#8220;local&#8221; definitions will be merged in.</p>
                                     <a href="#auto-index-term-3916310420-plugin-86">[&#8618;]</a>
                                     <a href="#auto-index-term-3916310420-plugin-87">[&#8618;]</a>
                                     <a href="#auto-index-term-3916310420-plugin-88">[&#8618;]</a>
+                                    <a href="#auto-index-term-3916310420-plugin-89">[&#8618;]</a>
+                                    <a href="#auto-index-term-3916310420-plugin-90">[&#8618;]</a>
+                                    <a href="#auto-index-term-3916310420-plugin-91">[&#8618;]</a>
+                                    <a href="#auto-index-term-3916310420-plugin-92">[&#8618;]</a>
+                                    <a href="#auto-index-term-3916310420-plugin-93">[&#8618;]</a>
+                                    <a href="#auto-index-term-3916310420-plugin-94">[&#8618;]</a>
                 
             </div>
                                 
