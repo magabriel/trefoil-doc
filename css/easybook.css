@@ -2456,7 +2456,571 @@ ul.literal-list > li.no-p > p:first-child {
     text-indent: 0;
 }
 
+    /*
+* Word search
+* ===========
+*/
 
+
+.wordsearch-title {
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 3px solid black;
+    line-height: 1em;
+}
+
+.wordsearch-puzzle {
+    float: left;
+    margin-bottom: 0.5em;
+}
+
+.wordsearch-puzzle,
+.wordsearch-solution {
+    font-family: "Courier New", monospace;
+    border: 2px solid black;
+    padding: 5px;
+    width: max-content;
+    display: inline-block;
+}
+
+.wordsearch-solution {
+    border: 2px solid black;
+    padding: 5px;
+    width: max-content;
+    display: inline-block;
+}
+
+.wordsearch-puzzle table,
+.wordsearch-solution table {
+    margin: 0;
+    width: auto;
+    height: auto;
+    border: none;
+    border-collapse: collapse;
+}
+
+.wordsearch.wordsearch-puzzle-container {
+    clear: both;
+    margin-bottom: 0;
+}
+
+.wordsearch-puzzle table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    border: none;
+}
+
+.wordsearch-solution table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    border: none;
+}
+
+.wordsearch-solution table td.cell-letter {
+    color: black;
+}
+
+.wordsearch-solution table td.cell-filler {
+    color: #aaaaaa;
+}
+
+
+.wordsearch-solution table td.cell-vertical-begin .cell-border-vertical {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 20px 20px 0 0;
+    height: 24px;
+    width: 16px;
+    top: 0;
+    left: 0;
+
+    border-top: 2px solid #888;
+    border-left: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-vertical .cell-border-vertical {
+    background: transparent;
+    position: absolute;
+
+    height: 24px;
+    width: 16px;
+    top: 0;
+    left: 0;
+
+    border-left: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-vertical-end .cell-border-vertical {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 0 0 20px 20px;
+    height: 24px;
+    width: 16px;
+    top: -4px;
+    left: 0;
+
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-horizontal-begin .cell-border-horizontal {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 20px 0 0 20px;
+    height: 16px;
+    width: 24px;
+    top: 0;
+    left: 0;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-horizontal .cell-border-horizontal {
+    background: transparent;
+    position: absolute;
+
+    height: 16px;
+    width: 24px;
+    top: 0;
+    left: 0;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-horizontal-end .cell-border-horizontal {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 0 20px 20px 0;
+    height: 16px;
+    width: 24px;
+    top: 0;
+    left: -4px;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-diagonal-up-begin .cell-border-diagonal-up {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 20px 0 0 20px;
+    transform: rotate(-45deg);
+    height: 13px;
+    width: 30px;
+    top: -4px;
+    left: -4px;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-diagonal-up .cell-border-diagonal-up {
+    background: transparent;
+    position: absolute;
+
+    transform: rotate(-45deg);
+    height: 13px;
+    width: 30px;
+    top: 0;
+    left: -6px;;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-diagonal-up-end .cell-border-diagonal-up {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 0 20px 20px 0;
+    transform: rotate(-45deg);
+    height: 13px;
+    width: 23.5px;
+    top: 3px;
+    left: -7.5px;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-diagonal-down-begin .cell-border-diagonal-down {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 20px 0 0 20px;
+    transform: rotate(45deg);
+    height: 13px;
+    width: 22px;
+    top: 2.5px;
+    left: -1.5px;;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-diagonal-down .cell-border-diagonal-down {
+    background: transparent;
+    position: absolute;
+
+    transform: rotate(45deg);
+    height: 13px;
+    width: 30px;
+    top: 0;
+    left: -6px;;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-diagonal-down-end .cell-border-diagonal-down {
+    background: transparent;
+    position: absolute;
+
+    border-radius: 0 20px 20px 0;
+    transform: rotate(45deg);
+    height: 13px;
+    width: 29px;
+    top: 0;
+    left: -7.5px;;
+
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+.wordsearch-solution table td.cell-start-word {
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.wordsearch-puzzle .cell-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+}
+
+.wordsearch-solution .cell-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+}
+
+.wordsearch.wordsearch-solution-container {
+    float: left;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.wordsearch-wordlist {
+    float: left;
+    font-size: 14px;;
+}
+
+.wordsearch-wordlist ul {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 0;
+    vertical-align: top;
+
+    list-style: none;
+    padding: 0;
+}
+
+.wordsearch-wordlist ul + ul {
+    margin-left: 2em;
+}
+
+.wordsearch-wordlist ul li {
+    margin: 0.3px 0;
+}    /*
+* WordFillIn
+* ==========
+*/
+
+
+/****
+* General
+*/
+
+.wordfillin-title {
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 3px solid black;
+    line-height: 1em;
+}
+
+.wordfillin-solution-container  .wordfillin-title {
+    border-bottom: 0;
+}
+
+.wordfillin-puzzle,
+.wordfillin-solution {
+    font-family: "Courier New", monospace;
+    width: max-content;
+    display: inline-block;
+}
+
+.wordfillin-puzzle {
+    border: 2px solid black;
+}
+
+.wordfillin-solution {
+    border: 1px solid black;
+}
+
+.wordfillin-puzzle {
+    float: left;
+    margin-bottom: 0.5em;
+    padding: 5px;
+}
+
+.wordfillin-solution {
+    padding: 5px;
+}
+
+.wordfillin-puzzle table,
+.wordfillin-solution table {
+    margin: 0;
+    width: auto;
+    height: auto;
+    border: none;
+    border-collapse: collapse;
+}
+
+.wordfillin.wordfillin-puzzle-container {
+    clear: both;
+    margin-bottom: 0;
+}
+
+.wordfillin.wordfillin-solution-container {
+    float: left;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.wordfillin-puzzle *, 
+.wordfillin-solution * {
+    box-sizing: border-box;
+}
+
+.wordfillin-puzzle *:before, 
+.wordfillin-puzzle *:after, 
+.wordfillin-solution *:before,
+.wordfillin-solution *:after {
+    box-sizing: inherit;
+}
+
+.wordfillin-puzzle table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    border: none;
+}
+
+.wordfillin-solution table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.wordfillin-solution table td.cell-letter {
+    color: black;
+}
+
+.wordfillin-solution table td.cell-filler {
+    color: #aaaaaa;
+}
+
+.wordfillin-puzzle .cell-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+}
+
+.wordfillin-solution .cell-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+}
+
+/****
+* Puzzle start of word markers
+*/
+
+.wordfillin-puzzle .cell-horizontal-begin.cell-no-reverse-horizontal.cell-start-word .cell-arrow-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-top: 10px solid transparent;
+    border-left: 3px solid #888;
+    border-bottom: 10px solid transparent;
+}
+
+.wordfillin-puzzle .cell-horizontal-end.cell-reverse-horizontal.cell-start-word .cell-arrow-left {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border-top: 10px solid transparent;
+    border-right: 3px solid #888;
+    border-bottom: 10px solid transparent;
+}
+
+.wordfillin-puzzle .cell-vertical-begin.cell-no-reverse-vertical.cell-start-word .cell-arrow-down {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    border-left: 10px solid transparent;
+    border-top: 3px solid #888;
+    border-right: 10px solid transparent;
+}
+
+.wordfillin-puzzle .cell-vertical-end.cell-reverse-vertical.cell-start-word .cell-arrow-up {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-left: 10px solid transparent;
+    border-bottom: 3px solid #888;
+    border-right: 10px solid transparent;
+}
+
+/****
+* Solution start of word markers
+*/
+
+.wordfillin-solution .cell-horizontal-begin.cell-no-reverse-horizontal.cell-start-word .cell-arrow-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-top: 10px solid transparent;
+    border-left: 3px solid #888;
+    border-bottom: 10px solid transparent;
+}
+
+.wordfillin-solution .cell-horizontal-end.cell-reverse-horizontal.cell-start-word .cell-arrow-left {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border-top: 10px solid transparent;
+    border-right: 3px solid #888;
+    border-bottom: 10px solid transparent;
+}
+
+.wordfillin-solution .cell-vertical-begin.cell-no-reverse-vertical.cell-start-word .cell-arrow-down {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    border-left: 10px solid transparent;
+    border-top: 3px solid #888;
+    border-right: 10px solid transparent;
+}
+
+.wordfillin-solution .cell-vertical-end.cell-reverse-vertical.cell-start-word .cell-arrow-up {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-left: 10px solid transparent;
+    border-bottom: 3px solid #888;
+    border-right: 10px solid transparent;
+}
+
+
+    .wordfillin-solution td.cell-letter, 
+    .wordfillin-solution td.cell-hint {
+        border-top: 2px solid #888;
+        border-bottom: 2px solid #888;
+        border-left: 2px solid #888;
+        border-right: 2px solid #888;
+    }
+
+    .wordfillin-solution table td.cell-hint{
+        color: black;
+        font-weight: bold;
+    }
+
+
+
+.wordfillin-puzzle td.cell-letter{
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-left: 2px solid #888;
+    border-right: 2px solid #888;
+}
+
+
+/****
+* Word list
+*/
+
+.wordfillin-wordlist {
+    float: left;
+    font-size: 14px;;
+}
+
+.wordfillin-wordlist ul {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 0;
+    vertical-align: top;
+
+    list-style: none;
+    padding: 0;
+}
+
+.wordfillin-wordlist ul + ul {
+    margin-left: 2em;
+}
+
+.wordfillin-wordlist ul li {
+    margin: 0.3px 0;
+}
 
 
 @media (min-width: 992px) {
