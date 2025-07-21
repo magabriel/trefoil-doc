@@ -3,6 +3,8 @@ trefoil-doc-*.html
 .buildpath
 .project
 .settings
+.vscode
+
 
 nbproject
 
